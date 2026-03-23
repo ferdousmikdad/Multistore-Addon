@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multistore for FlexStock – WPPOOL</title>
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"SF Pro Display"', '-apple-system', 'BlinkMacSystemFont', '"Plus Jakarta Sans"', '"Segoe UI"', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#7334C1',
+              dark:    '#5e28a8',
+              light:   '#f5f0ff',
+              border:  'rgba(115,52,193,0.2)',
+            },
+            surface: {
+              DEFAULT: '#ffffff',
+              muted:   '#f9fafb',
+              subtle:  '#f3f4f6',
+            },
+            sidebar: {
+              DEFAULT: '#1e1f2e',
+              border:  '#2d2e42',
+            },
+            ink: {
+              DEFAULT: '#111827',
+              muted:   '#4B5563',
+              light:   '#6B7280',
+            },
+          },
+          boxShadow: {
+            'brand-sm':  '0 4px 16px rgba(115,52,193,.25)',
+            'brand-md':  '0 8px 24px rgba(115,52,193,.35)',
+            'brand-lg':  '0 10px 40px rgba(115,52,193,.14)',
+            'float':     '0 8px 30px rgba(0,0,0,.12)',
+            'mockup':    '0 40px 80px rgba(0,0,0,.08)',
+          },
+          borderRadius: {
+            'xl2': '14px',
+            'xl3': '20px',
+          },
+          letterSpacing: {
+            tightest: '-0.03em',
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS (animations, glow, etc.) -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="bg-white font-sans text-ink antialiased">
+
+  <!-- ══════════════════════════════════════════════════════
+       TOPBAR
+  ══════════════════════════════════════════════════════ -->
+  <div class="bg-[#0D1117] text-white text-center text-[13.5px] font-medium py-2.5 px-5 tracking-[.01em]">
+    🎉 Introducing Multistore for FlexStock —
+    <span class="text-amber-400 mx-1 font-semibold">50% OFF</span>
+    Launch Special.
+    <a href="#pricing" class="text-blue-300 underline underline-offset-2 ml-1.5 hover:text-blue-200 transition-colors">
+      Grab the deal →
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <nav id="main-nav"
+       class="sticky top-0 z-50 bg-white/95 navbar-blur border-b border-gray-100 px-8 transition-shadow duration-200">
+    <div class="max-w-[1200px] mx-auto flex items-center gap-8 h-16">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center flex-shrink-0">
+        <img src="multistore-logo.svg" alt="Multistore" class="h-8 w-auto" />
+      </a>
+
+      <!-- Desktop menu -->
+      <ul id="nav-menu" class="hidden md:flex items-center gap-1 list-none ml-2">
+        <li><a href="#" class="text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-100 px-3 py-1.5 rounded-lg transition-all duration-150">Features</a></li>
+        <li>
+          <a href="#" class="text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-100 px-3 py-1.5 rounded-lg transition-all duration-150 flex items-center gap-1">
+            Addons
+            <svg class="w-3 h-3 opacity-50" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
+            </svg>
+          </a>
+        </li>
+        <li><a href="#" class="text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-100 px-3 py-1.5 rounded-lg transition-all duration-150">Pricing</a></li>
+        <li>
+          <a href="#" class="text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-100 px-3 py-1.5 rounded-lg transition-all duration-150 flex items-center gap-1">
+            Products
+            <svg class="w-3 h-3 opacity-50" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/>
+            </svg>
+          </a>
+        </li>
+        <li><a href="#" class="text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-100 px-3 py-1.5 rounded-lg transition-all duration-150">Bundle</a></li>
+        <li><a href="#" class="text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-100 px-3 py-1.5 rounded-lg transition-all duration-150">Help Center</a></li>
+      </ul>
+
+      <!-- Nav actions -->
+      <div class="ml-auto flex items-center gap-2.5">
+        <a href="#" class="hidden md:block text-sm font-medium text-ink-muted hover:text-ink transition-colors px-2.5 py-1.5">
+          Join Community
+        </a>
+        <a href="#pricing"
+           class="text-sm font-medium text-white bg-brand hover:bg-brand-dark px-5 py-2 rounded-full border border-brand transition-all duration-150 hover:-translate-y-px outline-none">
+          Buy Now
+        </a>
+        <!-- Mobile hamburger -->
+        <button id="nav-toggle" aria-expanded="false" aria-label="Toggle menu"
+                class="md:hidden p-1.5 rounded-lg hover:bg-gray-100 transition-colors">
+          <svg class="w-5 h-5 text-ink-muted" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="nav-menu-mobile" class="hidden md:hidden border-t border-gray-100 py-3 px-2">
+      <a href="#" class="block px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-50 rounded-lg">Features</a>
+      <a href="#" class="block px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-50 rounded-lg">Addons</a>
+      <a href="#" class="block px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-50 rounded-lg">Pricing</a>
+      <a href="#" class="block px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-50 rounded-lg">Products</a>
+      <a href="#" class="block px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-50 rounded-lg">Bundle</a>
+      <a href="#" class="block px-3 py-2 text-sm font-medium text-ink-muted hover:text-ink hover:bg-gray-50 rounded-lg">Help Center</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="relative pt-20 px-8 pb-0 text-center overflow-hidden hero-glow">
+    <div class="max-w-[820px] mx-auto relative z-10">
+
+      <!-- Badge -->
+      <div class="anim-fade-up inline-flex items-center gap-1.5 bg-brand-light border border-brand-border rounded-full px-3.5 py-1.5 text-[13px] font-semibold text-brand mb-7">
+        <div class="w-5 h-5 bg-brand rounded-full flex items-center justify-center flex-shrink-0">
+          <svg class="w-2.5 h-2.5 fill-white" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+        New Addon — Multistore for FlexStock
+      </div>
+
+      <!-- Headline -->
+      <h1 class="anim-fade-up-d1 text-[clamp(38px,5.5vw,58px)] font-black leading-[1.12] tracking-tightest text-ink mb-5" style="font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,'Plus Jakarta Sans',sans-serif;font-weight:600;">
+        Run Multiple <span style="color:#7334C1;">WooCommerce</span><br />
+        <span style="color:#7334C1;">Stores</span> from One
+        <span class="inline-flex items-center gap-2 whitespace-nowrap">
+          <img src="assets/googlesheeticon.svg" alt="Google Sheets" class="headline-sheets-icon" />
+          <span style="color:#00A341;">Google Sheet.</span>
+        </span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="anim-fade-up-d2 text-lg font-normal text-ink-muted leading-relaxed max-w-[620px] mx-auto mb-9">
+        Sync shared stock across stores or keep each store independent —
+        all from one smarter Google Sheets workflow.
+      </p>
+
+      <!-- CTAs -->
+      <div class="anim-fade-up-d3 flex items-center justify-center gap-3 flex-wrap mb-5">
+        <!-- Primary -->
+        <a href="#pricing"
+           class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white text-[22px] font-medium leading-[120%] px-8 py-4 rounded-full border border-brand transition-all duration-200 hover:-translate-y-0.5 outline-none">
+          <svg class="w-5 h-5 fill-white flex-shrink-0" viewBox="0 0 20 20">
+            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3z"/>
+          </svg>
+          Get Multi-Store Sync
+        </a>
+        <!-- Secondary / ghost -->
+        <a href="#demo"
+           class="inline-flex items-center gap-2.5 bg-transparent hover:bg-brand text-brand hover:text-white text-[22px] font-medium leading-[120%] px-8 py-4 rounded-full border border-brand transition-all duration-200 hover:-translate-y-0.5 outline-none">
+          <div class="w-6 h-6 rounded-full border border-current flex items-center justify-center flex-shrink-0">
+            <svg class="w-2.5 h-2.5 fill-current ml-0.5" viewBox="0 0 20 20">
+              <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+            </svg>
+          </div>
+          Live Demo
+        </a>
+      </div>
+
+      <!-- Trust bar -->
+      <div class="anim-fade-up-d4 flex items-center justify-center gap-5 flex-wrap mb-28">
+        <!-- Stars -->
+        <div class="flex items-center gap-1.5 text-[13px] font-medium text-ink-muted">
+          <div class="flex gap-0.5">
+            <svg class="w-3.5 h-3.5 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-3.5 h-3.5 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-3.5 h-3.5 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-3.5 h-3.5 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-3.5 h-3.5 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          5-Star Rated
+        </div>
+        <div class="w-px h-4 bg-gray-200"></div>
+        <!-- Creators -->
+        <div class="flex items-center gap-1.5 text-[13px] font-medium text-ink-muted">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM6 8a2 2 0 11-4 0 2 2 0 014 0zM15.992 17.5H18a2 2 0 002-2V15a5.006 5.006 0 00-5-5h-.5M4 10h-.5A5.006 5.006 0 00-1 15v.5a2 2 0 002 2h2" stroke-linecap="round"/>
+          </svg>
+          35,000+ Creators
+        </div>
+        <div class="w-px h-4 bg-gray-200"></div>
+        <!-- Guarantee -->
+        <div class="flex items-center gap-1.5 text-[13px] font-medium text-ink-muted">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" stroke-linecap="round"/>
+          </svg>
+          Risk-Free 30-Day Guarantee
+        </div>
+      </div>
+
+    </div><!-- /hero inner -->
+
+    <!-- ── Product Visual: Dashboard (bg) + Google Sheet (fg) ── -->
+    <div class="anim-fade-up-d5 relative max-w-[1040px] mx-auto">
+
+      <!-- Floating card — left -->
+      <div class="hidden lg:flex anim-float absolute -left-8 top-[30%] z-20
+                  items-center gap-2.5 bg-white border border-gray-100 rounded-xl px-3.5 py-3
+                  shadow-float text-[12.5px] whitespace-nowrap">
+        <div class="w-9 h-9 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3z"/>
+            <path d="M16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-ink">Stock Synced</div>
+          <div class="text-[11.5px] text-ink-light">4 stores updated · Just now</div>
+        </div>
+        <div class="inline-flex items-center gap-1 bg-green-50 border border-green-200 rounded-md px-2 py-1 text-[10.5px] font-semibold text-green-700">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-500 dot-live"></span> Live
+        </div>
+      </div>
+
+      <!-- Floating card — right -->
+      <div class="hidden lg:flex anim-float-delay absolute -right-8 top-[20%] z-20
+                  items-center gap-2.5 bg-white border border-gray-100 rounded-xl px-3.5 py-3
+                  shadow-float text-[12.5px] whitespace-nowrap">
+        <div class="w-9 h-9 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+          <svg class="w-4 h-4 fill-brand" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-semibold text-ink">Product Added</div>
+          <div class="text-[11.5px] text-ink-light">Pushed to all connected stores</div>
+        </div>
+      </div>
+
+      <!-- Wrapper -->
+      <div class="bg-brand-light border border-brand/10 rounded-[16px_16px_0_0] p-5 shadow-mockup overflow-hidden">
+        <div class="bg-white rounded-[10px] border border-gray-200 shadow-sm overflow-hidden">
+
+          <!-- Browser chrome -->
+          <div class="bg-gray-50 border-b border-gray-200 px-3.5 py-2.5 flex items-center gap-2.5">
+            <div class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            </div>
+            <div class="flex-1 bg-gray-100 rounded-md px-2.5 py-1 text-[11.5px] text-gray-400 font-medium text-left flex items-center gap-1.5">
+              <svg class="w-2.5 h-2.5 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 1a7 7 0 100 14A7 7 0 008 1zm-.75 10.5a.75.75 0 101.5 0 .75.75 0 00-1.5 0zM8 4.75a.75.75 0 01.75.75v3a.75.75 0 01-1.5 0v-3A.75.75 0 018 4.75z" clip-rule="evenodd"/>
+              </svg>
+              yourstore.com/wp-admin · FlexStock Multistore
+            </div>
+          </div>
+
+          <!-- ── Two-layer illustration area ── -->
+          <div class="relative" style="min-height:400px;">
+
+            <!-- LAYER 1 · Dashboard (background) -->
+            <div class="absolute inset-0 grid pointer-events-none select-none" style="grid-template-columns:210px 1fr;">
+              <!-- Sidebar -->
+              <div class="bg-sidebar py-4 flex flex-col">
+                <div class="px-4 pb-3 mb-2 border-b border-sidebar-border flex items-center gap-2 text-[12px] font-bold text-white">
+                  <div class="w-5 h-5 bg-brand rounded flex-shrink-0 flex items-center justify-center">
+                    <svg class="w-3 h-3" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+                  </div>
+                  FlexStock
+                </div>
+                <div class="px-4 py-2 text-[11.5px] text-gray-400">Dashboard</div>
+                <div class="px-4 py-2 text-[11.5px] text-purple-300 bg-white/10 border-r-2 border-brand font-medium">Stores</div>
+                <div class="px-4 py-2 text-[11.5px] text-gray-400">Orders</div>
+                <div class="px-4 py-2 text-[11.5px] text-gray-400">Analytics</div>
+                <div class="px-4 py-2 text-[11.5px] text-gray-400">Integrations</div>
+                <div class="px-4 py-2 mt-2 pt-3 border-t border-sidebar-border text-[11.5px] text-gray-400">Settings</div>
+              </div>
+              <!-- Dashboard content -->
+              <div class="bg-white p-5">
+                <div class="flex items-center justify-between mb-4">
+                  <div>
+                    <div class="text-[13px] font-bold text-ink">Store Management</div>
+                    <div class="text-[10.5px] text-ink-light mt-0.5">All stores synced to Google Sheets</div>
+                  </div>
+                  <div class="bg-brand text-white text-[10px] font-medium px-3 py-1 rounded-full">+ Add Store</div>
+                </div>
+                <div class="grid grid-cols-3 gap-3 mb-4">
+                  <div class="bg-gray-50 rounded-lg p-3 text-center">
+                    <div class="text-[20px] font-bold text-ink leading-none">12</div>
+                    <div class="text-[9px] text-gray-400 uppercase tracking-wider mt-1">Stores</div>
+                  </div>
+                  <div class="bg-green-50 rounded-lg p-3 text-center">
+                    <div class="text-[20px] font-bold text-green-600 leading-none">7</div>
+                    <div class="text-[9px] text-gray-400 uppercase tracking-wider mt-1">Shared</div>
+                  </div>
+                  <div class="bg-brand-light rounded-lg p-3 text-center">
+                    <div class="text-[20px] font-bold text-brand leading-none">5</div>
+                    <div class="text-[9px] text-gray-400 uppercase tracking-wider mt-1">Independent</div>
+                  </div>
+                </div>
+                <div class="space-y-1.5">
+                  <div class="flex items-center gap-2 bg-gray-50 rounded-md px-2.5 py-2">
+                    <div class="w-5 h-5 rounded-full bg-indigo-400 flex-shrink-0"></div>
+                    <span class="text-[11px] font-medium text-ink">Amber's Store</span>
+                    <span class="ml-auto text-[9px] font-semibold text-green-600">● Active</span>
+                  </div>
+                  <div class="flex items-center gap-2 bg-gray-50 rounded-md px-2.5 py-2">
+                    <div class="w-5 h-5 rounded-full bg-pink-400 flex-shrink-0"></div>
+                    <span class="text-[11px] font-medium text-ink">TechCraft Co.</span>
+                    <span class="ml-auto text-[9px] font-semibold text-green-600">● Active</span>
+                  </div>
+                  <div class="flex items-center gap-2 bg-gray-50 rounded-md px-2.5 py-2">
+                    <div class="w-5 h-5 rounded-full bg-amber-400 flex-shrink-0"></div>
+                    <span class="text-[11px] font-medium text-ink">NatureMade</span>
+                    <span class="ml-auto text-[9px] font-semibold text-amber-600">◌ Pending</span>
+                  </div>
+                  <div class="flex items-center gap-2 bg-gray-50 rounded-md px-2.5 py-2">
+                    <div class="w-5 h-5 rounded-full bg-emerald-400 flex-shrink-0"></div>
+                    <span class="text-[11px] font-medium text-ink">GadgetHub</span>
+                    <span class="ml-auto text-[9px] font-semibold text-green-600">● Active</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /dashboard layer -->
+
+          </div><!-- /two-layer area -->
+        </div><!-- /browser chrome -->
+      </div><!-- /wrapper -->
+
+      <!-- Google Sheet floating card — outside the wrapper -->
+      <div class="hidden lg:flex absolute -top-12 -right-12 z-20 flex-col bg-white border border-gray-200 rounded-xl overflow-hidden anim-float-sheet"
+           style="width:480px; box-shadow: 0 20px 60px rgba(0,0,0,.18), 0 6px 20px rgba(0,0,0,.10);">
+
+        <!-- Sheets title bar -->
+        <div class="flex items-center gap-2.5 px-3 py-2 border-b border-gray-100 bg-white flex-shrink-0">
+          <!-- G icon with googlesheeticon.svg behind it -->
+          <div class="relative flex-shrink-0 w-[22px] h-[22px]">
+            <img src="assets/googlesheeticon.svg" class="absolute w-[36px] h-[36px] opacity-90 pointer-events-none select-none" style="top:50%;transform:translateY(-50%);right:-8px;" alt="">
+            <svg class="relative w-[22px] h-[22px] z-10" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+              <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
+              <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
+              <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
+              <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
+              <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
+              <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
+            </svg>
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="text-[12.5px] font-medium text-ink truncate">FlexStock Inventory — All Stores</div>
+            <div class="text-[9.5px] text-gray-400">All changes saved · Google Sheets</div>
+          </div>
+          <div class="flex items-center gap-2 flex-shrink-0">
+            <div class="inline-flex items-center gap-1 bg-green-50 border border-green-200 rounded px-2 py-0.5 text-[9.5px] font-semibold text-green-700">
+              <span class="w-1 h-1 rounded-full bg-green-500 dot-live"></span> All synced
+            </div>
+            <div class="bg-[#1a73e8] text-white text-[10.5px] font-medium px-3 py-1 rounded-full cursor-pointer">Share</div>
+          </div>
+        </div>
+
+        <!-- Menu bar -->
+        <div class="flex items-center px-3 py-0.5 border-b border-gray-100 bg-white flex-shrink-0">
+          <div class="flex gap-0 text-[11px] text-[#444]">
+            <span class="px-2 py-1 rounded hover:bg-gray-100 cursor-default">File</span>
+            <span class="px-2 py-1 rounded hover:bg-gray-100 cursor-default">Edit</span>
+            <span class="px-2 py-1 rounded hover:bg-gray-100 cursor-default">View</span>
+            <span class="px-2 py-1 rounded hover:bg-gray-100 cursor-default">Insert</span>
+            <span class="px-2 py-1 rounded hover:bg-gray-100 cursor-default">Format</span>
+            <span class="px-2 py-1 rounded hover:bg-gray-100 cursor-default">Data</span>
+            <span class="px-2 py-1 rounded hover:bg-gray-100 cursor-default">Tools</span>
+            <span class="px-2 py-1 rounded hover:bg-gray-100 cursor-default">Extensions</span>
+          </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="flex items-center gap-0.5 px-2 py-1 border-b border-gray-100 bg-white flex-shrink-0">
+          <button class="p-1 rounded hover:bg-gray-100 text-gray-500">
+            <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.793 2.232a.75.75 0 01-.025 1.06L3.622 7.25h10.003a5.375 5.375 0 010 10.75H10.75a.75.75 0 010-1.5h2.875a3.875 3.875 0 000-7.75H3.622l4.146 3.957a.75.75 0 01-1.036 1.085l-5.5-5.25a.75.75 0 010-1.085l5.5-5.25a.75.75 0 011.06.025z" clip-rule="evenodd"/></svg>
+          </button>
+          <button class="p-1 rounded hover:bg-gray-100 text-gray-500">
+            <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.207 2.232a.75.75 0 00.025 1.06L16.378 7.25H6.375a5.375 5.375 0 000 10.75H9.25a.75.75 0 000-1.5H6.375a3.875 3.875 0 010-7.75h10.003l-4.146 3.957a.75.75 0 001.036 1.085l5.5-5.25a.75.75 0 000-1.085l-5.5-5.25a.75.75 0 00-1.06.025z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="w-px h-4 bg-gray-200 mx-1"></div>
+          <div class="text-[10.5px] text-gray-600 border border-gray-200 rounded px-1.5 py-0.5 cursor-default select-none">100%</div>
+          <div class="w-px h-4 bg-gray-200 mx-1"></div>
+          <button class="px-1.5 py-0.5 rounded hover:bg-gray-100 text-[10.5px] font-medium text-gray-600">$</button>
+          <button class="px-1.5 py-0.5 rounded hover:bg-gray-100 text-[10.5px] font-medium text-gray-600">%</button>
+          <div class="w-px h-4 bg-gray-200 mx-1"></div>
+          <button class="px-1.5 py-0.5 rounded hover:bg-gray-100 text-[10.5px] font-bold text-gray-700">B</button>
+          <button class="px-1.5 py-0.5 rounded hover:bg-gray-100 text-[10.5px] italic text-gray-700">I</button>
+          <button class="px-1.5 py-0.5 rounded hover:bg-gray-100 text-[10.5px] underline text-gray-700">U</button>
+          <div class="w-px h-4 bg-gray-200 mx-1"></div>
+          <div class="flex flex-col items-center px-1.5 py-0.5 cursor-pointer hover:bg-gray-100 rounded">
+            <span class="text-[10px] font-semibold text-gray-700 leading-none">A</span>
+            <div class="w-3 h-[2.5px] bg-[#137333] mt-0.5 rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- Formula bar -->
+        <div class="flex items-center gap-2 px-2 py-1 border-b border-gray-200 bg-white flex-shrink-0">
+          <div class="text-[11px] text-gray-600 bg-[#f8f9fa] border border-gray-200 rounded px-2 py-0.5 w-11 text-center font-mono flex-shrink-0">D2</div>
+          <span class="text-[12px] text-gray-400 flex-shrink-0 italic" style="font-family:Georgia,serif;">ƒx</span>
+          <div class="flex-1 bg-white border border-[#4285f4] ring-1 ring-[#4285f4]/20 rounded px-2 py-0.5 text-[11px] text-[#137333] font-mono">=C2*1.15</div>
+        </div>
+
+        <!-- Spreadsheet grid -->
+        <div class="overflow-auto">
+          <table class="border-collapse text-[11px]" style="min-width:100%;">
+            <thead>
+              <tr class="bg-[#f8f9fa]">
+                <th class="w-7 min-w-[1.75rem] border-r border-b border-[#e2e2e2] py-1 text-center text-[9px] text-gray-400 font-normal sticky top-0 bg-[#f8f9fa] z-10"></th>
+                <th class="min-w-[72px] border-r border-b border-[#e2e2e2] py-1 text-center text-[10px] text-gray-500 font-medium sticky top-0 bg-[#f8f9fa] z-10">A</th>
+                <th class="min-w-[120px] border-r border-b border-[#e2e2e2] py-1 text-center text-[10px] text-gray-500 font-medium sticky top-0 bg-[#f8f9fa] z-10">B</th>
+                <th class="min-w-[52px] border-r border-b border-[#e2e2e2] py-1 text-center text-[10px] text-gray-500 font-medium sticky top-0 bg-[#f8f9fa] z-10">C</th>
+                <th class="min-w-[62px] border-r border-b border-[#e2e2e2] py-1 text-center text-[10px] text-gray-500 font-medium sticky top-0 bg-[#f8f9fa] z-10">D</th>
+                <th class="min-w-[76px] border-r border-b border-[#e2e2e2] py-1 text-center text-[10px] text-gray-500 font-medium sticky top-0 bg-[#f8f9fa] z-10">E</th>
+                <th class="min-w-[60px] border-b border-[#e2e2e2] text-center text-[10px] text-gray-500 font-medium sticky top-0 bg-[#f8f9fa] z-10">F</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-[#e8f5e9]">
+                <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">1</td>
+                <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333]">SKU</td>
+                <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333]">Product Name</td>
+                <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-center">Stock</td>
+                <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-center">Price</td>
+                <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-center">Sync Mode</td>
+                <td class="border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-center">Updated</td>
+              </tr>
+              <tr style="outline:2px solid #1a73e8;outline-offset:-1px;position:relative;">
+                <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-[#1a73e8] font-medium py-1.5 bg-[#e8f0fe] select-none">2</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink font-mono text-[10px]">WP-001</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink font-medium">Wireless Headphones</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">142</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-[#137333] text-center font-medium bg-[#f0fdf4]">$57.50</td>
+                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 text-center bg-[#ede9fe]"><span class="text-[10px] font-semibold text-[#7c3aed]">Shared</span></td>
+                <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-ink-light text-center">Just now</td>
+              </tr>
+              <tr class="hover:bg-[#f8f9ff]">
+                <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">3</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink font-mono text-[10px]">WP-002</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink">USB-C Cable</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">380</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">$14.94</td>
+                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 text-center bg-[#ede9fe]"><span class="text-[10px] font-semibold text-[#7c3aed]">Shared</span></td>
+                <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-ink-light text-center">2m ago</td>
+              </tr>
+              <tr class="hover:bg-[#f8f9ff]">
+                <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">4</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink font-mono text-[10px]">NM-031</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink">Phone Case (Black)</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">56</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">$18.50</td>
+                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 text-center bg-[#f0f9ff]"><span class="text-[10px] font-semibold text-[#0369a1]">Independent</span></td>
+                <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-ink-light text-center">5m ago</td>
+              </tr>
+              <tr class="hover:bg-[#f8f9ff]">
+                <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">5</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink font-mono text-[10px]">GH-204</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink">Laptop Stand</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">28</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">$40.24</td>
+                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 text-center bg-[#ede9fe]"><span class="text-[10px] font-semibold text-[#7c3aed]">Shared</span></td>
+                <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-ink-light text-center">Just now</td>
+              </tr>
+              <tr class="hover:bg-[#f8f9ff]">
+                <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">6</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink font-mono text-[10px]">US-118</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink">Screen Cleaner Kit</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">200</td>
+                <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-ink-muted text-center">$10.34</td>
+                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 text-center bg-[#f0f9ff]"><span class="text-[10px] font-semibold text-[#0369a1]">Independent</span></td>
+                <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-ink-light text-center">1m ago</td>
+              </tr>
+              <tr>
+                <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-300 py-1.5 bg-[#f8f9fa] select-none">7</td>
+                <td colspan="6" class="border-b border-[#e2e2e2] px-2 py-1.5 text-gray-200">·</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Sheet tabs — per-store tabs reflecting "Per-Store Tabs" feature -->
+        <div class="flex items-center border-t border-gray-200 bg-[#f8f9fa] flex-shrink-0 overflow-x-auto" style="height:28px;">
+          <button class="flex items-center gap-1.5 px-3 h-full text-[10.5px] font-medium text-[#137333] bg-white border-t-2 border-t-[#137333] border-r border-gray-200 whitespace-nowrap flex-shrink-0">
+            <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
+              <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/>
+              <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/>
+              <path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/>
+              <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/>
+              <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/>
+              <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/>
+            </svg>
+            Amber's Store
+          </button>
+          <button class="px-3 h-full text-[10.5px] text-gray-500 hover:bg-gray-200 border-r border-gray-200 whitespace-nowrap flex-shrink-0">TechCraft Co.</button>
+          <button class="px-3 h-full text-[10.5px] text-gray-500 hover:bg-gray-200 border-r border-gray-200 whitespace-nowrap flex-shrink-0">NatureMade</button>
+          <button class="px-3 h-full text-[10.5px] text-gray-500 hover:bg-gray-200 border-r border-gray-200 whitespace-nowrap flex-shrink-0">GadgetHub</button>
+          <button class="px-2.5 h-full text-gray-500 hover:bg-gray-200 text-[16px] leading-none flex-shrink-0">+</button>
+        </div>
+
+      </div><!-- /Google Sheet floating card -->
+
+    </div><!-- /hero visual -->
+
+  </section><!-- /hero -->
+
+  <!-- ══════════════════════════════════════════════════════
+       PAIN POINTS
+  ══════════════════════════════════════════════════════ -->
+  <section id="pain-points" class="relative pt-[160px] pb-24 px-8 overflow-hidden" style="background:linear-gradient(180deg,#ffffff 0%,#faf8fc 100%);">
+
+    <!-- Subtle background radial tint -->
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 900px 700px at 65% 55%, rgba(239,68,68,0.035) 0%, transparent 65%);"></div>
+
+    <div class="max-w-[1200px] mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- ── LEFT: Copy ────────────────────────────────── -->
+        <div class="max-w-[500px]">
+
+          <!-- Title -->
+          <h2 data-reveal class="opacity-0 translate-y-4 transition-all duration-700 text-[36px] font-bold text-ink leading-[1.2] tracking-tightest mb-5">
+            👎 More Stores, More Manual Work.
+          </h2>
+
+          <!-- Subtitle -->
+          <p data-reveal class="opacity-0 translate-y-4 transition-all duration-700 text-lg text-ink-muted leading-relaxed mb-7">
+            Managing multiple WooCommerce stores often turns simple tasks into repeated edits, stock mismatches, scattered dashboards, and unnecessary manual work.
+          </p>
+
+          <!-- Common pain points label -->
+          <p data-reveal class="opacity-0 translate-y-4 transition-all duration-700 text-[11px] font-semibold text-ink-light uppercase tracking-wider mb-4">Common pain points:</p>
+
+          <!-- Pain points list -->
+          <div class="space-y-3 mb-10">
+
+            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 flex items-center gap-3 py-2.5 px-3.5 rounded-xl bg-red-50/60 border border-red-100/80">
+              <span class="flex-shrink-0 text-[17px] leading-none">☹️</span>
+              <span class="text-[14.5px] font-medium text-ink-muted">Update the same product across multiple stores</span>
+            </div>
+
+            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 flex items-center gap-3 py-2.5 px-3.5 rounded-xl bg-red-50/60 border border-red-100/80">
+              <span class="flex-shrink-0 text-[17px] leading-none">☹️</span>
+              <span class="text-[14.5px] font-medium text-ink-muted">Keep shared stock aligned manually</span>
+            </div>
+
+            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 flex items-center gap-3 py-2.5 px-3.5 rounded-xl bg-red-50/60 border border-red-100/80">
+              <span class="flex-shrink-0 text-[17px] leading-none">☹️</span>
+              <span class="text-[14.5px] font-medium text-ink-muted">Manage separate brands with no clean system</span>
+            </div>
+
+            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 flex items-center gap-3 py-2.5 px-3.5 rounded-xl bg-red-50/60 border border-red-100/80">
+              <span class="flex-shrink-0 text-[17px] leading-none">☹️</span>
+              <span class="text-[14.5px] font-medium text-ink-muted">Move product data from store to store the hard way</span>
+            </div>
+
+            <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 flex items-center gap-3 py-2.5 px-3.5 rounded-xl bg-red-50/60 border border-red-100/80">
+              <span class="flex-shrink-0 text-[17px] leading-none">☹️</span>
+              <span class="text-[14.5px] font-medium text-ink-muted">Waste time jumping between dashboards</span>
+            </div>
+
+          </div>
+
+          <!-- CTA button -->
+          <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700">
+            <a href="#solution"
+               class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white text-[22px] font-medium leading-[120%] px-8 py-4 rounded-full border border-brand transition-all duration-200 hover:-translate-y-0.5 outline-none shadow-brand-sm hover:shadow-brand-md">
+              Explore the Solution
+              <svg class="w-5 h-5 fill-white flex-shrink-0" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ── RIGHT: Illustration ────────────────────────── -->
+        <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 relative hidden lg:block">
+          <div class="relative" style="height:556px;">
+
+            <!-- ── Backdrop: layered mesh + dot grid ── -->
+            <div class="absolute inset-0 rounded-2xl overflow-hidden" style="background:linear-gradient(148deg,#fff8f8 0%,#fef1f1 45%,#fff9f0 100%);border:1.5px solid rgba(239,68,68,0.09);">
+              <!-- Radial warm glow centre -->
+              <div class="absolute inset-0" style="background:radial-gradient(ellipse 75% 60% at 55% 45%, rgba(239,68,68,0.07) 0%, transparent 70%);"></div>
+              <!-- Dot grid -->
+              <svg class="absolute inset-0 w-full h-full pointer-events-none" style="opacity:.18;" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="pdots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+                    <circle cx="1.5" cy="1.5" r="1.2" fill="#ef4444"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#pdots)"/>
+              </svg>
+            </div>
+
+            <!-- ── Marching-ant arrows (z:5, below windows) ── -->
+            <svg class="absolute inset-0 pointer-events-none" style="width:100%;height:100%;z-index:5;" viewBox="0 0 520 556" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="arr-a" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                  <polygon points="0 0,8 3,0 6" fill="#ef4444" opacity="0.55"/>
+                </marker>
+                <marker id="arr-b" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                  <polygon points="0 0,8 3,0 6" fill="#ef4444" opacity="0.55"/>
+                </marker>
+              </defs>
+              <!-- Arrow A→B: Store A right-center → Store B top-left -->
+              <path class="arrow-march" d="M 296 118 C 340 118, 310 162, 254 168" stroke="#ef4444" stroke-width="2" stroke-dasharray="7 5" fill="none" opacity="0.55" marker-end="url(#arr-a)"/>
+              <!-- Label A→B -->
+              <text x="306" y="134" font-size="9" fill="#ef4444" opacity="0.7" font-family="'SF Pro Display',-apple-system,sans-serif" font-weight="700" letter-spacing="0.02em">copy-paste ↘</text>
+              <!-- Arrow B→C: Store B bottom-left → Store C top-right -->
+              <path class="arrow-march" d="M 252 308 C 248 350, 248 375, 248 400" stroke="#ef4444" stroke-width="2" stroke-dasharray="7 5" fill="none" opacity="0.55" marker-end="url(#arr-b)" style="animation-delay:0.45s;"/>
+              <!-- Label B→C -->
+              <text x="174" y="362" font-size="9" fill="#ef4444" opacity="0.7" font-family="'SF Pro Display',-apple-system,sans-serif" font-weight="700" letter-spacing="0.02em">↓ repeat again</text>
+            </svg>
+
+            <!-- ══════════════════════════════════════════
+                 WINDOW 1 — Store A (primary · front)
+                 top:24 left:12 · z:25 · rotate(-3.5deg)
+            ══════════════════════════════════════════ -->
+            <div class="pain-win pain-win-a pain-win-enter-1 absolute bg-white"
+                 style="top:24px;left:12px;width:286px;z-index:25;border-radius:11px;overflow:hidden;border:1px solid #e2e4e9;box-shadow:0 18px 40px rgba(0,0,0,0.14),0 4px 10px rgba(0,0,0,0.07);">
+              <!-- Chrome bar -->
+              <div class="flex items-center gap-2 px-3 py-2.5 border-b border-gray-200" style="background:#f4f5f7;">
+                <div class="flex gap-[5px] flex-shrink-0">
+                  <span class="w-[9px] h-[9px] rounded-full bg-red-400"></span>
+                  <span class="w-[9px] h-[9px] rounded-full bg-amber-400"></span>
+                  <span class="w-[9px] h-[9px] rounded-full bg-emerald-400"></span>
+                </div>
+                <div class="flex-1 bg-white border border-gray-200 rounded-md px-2 py-[3px] text-[9px] text-gray-400 font-medium truncate leading-none">store-a.com · Products › Edit</div>
+                <div class="flex-shrink-0 flex items-center gap-[3px] bg-red-50 border border-red-100 text-red-500 text-[8px] font-bold px-2 py-[3px] rounded-full leading-none">
+                  <span class="w-[5px] h-[5px] rounded-full bg-red-500 dot-live-fast"></span>Out of Sync
+                </div>
+              </div>
+              <!-- Section label -->
+              <div class="px-3.5 pt-3 pb-1 flex items-center gap-1.5">
+                <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 20 20" fill="#7f54b3"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3z"/></svg>
+                <span class="text-[9.5px] font-semibold text-[#7f54b3] uppercase tracking-wider">WooCommerce · Store A</span>
+              </div>
+              <!-- Product name -->
+              <div class="px-3.5 pb-3 border-b border-gray-100">
+                <div class="text-[13px] font-bold text-gray-900 leading-snug">Wireless Earbuds</div>
+                <div class="text-[9.5px] text-gray-400 mt-0.5">SKU: WE-001 · Published</div>
+              </div>
+              <!-- Fields -->
+              <div class="px-3.5 py-3 space-y-2.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10.5px] text-gray-500 font-medium">Stock quantity</span>
+                  <div class="flex items-center gap-1.5">
+                    <div class="bg-gray-100 border border-gray-200 rounded-md px-2.5 py-1 text-[12px] font-mono font-bold text-gray-800 min-w-[40px] text-center">142</div>
+                    <span class="text-[9px] text-gray-400">units</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[10.5px] text-gray-500 font-medium">Regular price</span>
+                  <span class="text-[11px] font-semibold text-gray-700">$29.99</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[9px] text-gray-400">Last saved</span>
+                  <span class="text-[9px] text-amber-500 font-semibold">3 days ago</span>
+                </div>
+              </div>
+              <!-- Action bar -->
+              <div class="px-3.5 pb-3.5 flex gap-2">
+                <div class="flex-1 bg-[#7f54b3] text-white text-[10px] font-semibold text-center py-1.5 rounded-md cursor-default">Update</div>
+                <div class="px-3 bg-gray-100 text-gray-500 text-[10px] font-medium text-center py-1.5 rounded-md cursor-default">Preview</div>
+              </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════
+                 WINDOW 2 — Store B (mid · amber warning)
+                 top:172 right:6 · z:18 · rotate(2.8deg)
+            ══════════════════════════════════════════ -->
+            <div class="pain-win pain-win-b pain-win-enter-2 absolute bg-white"
+                 style="top:172px;right:6px;width:272px;z-index:18;border-radius:11px;overflow:hidden;border:1px solid #e2e4e9;box-shadow:0 14px 32px rgba(0,0,0,0.11),0 3px 8px rgba(0,0,0,0.06);">
+              <!-- Chrome bar -->
+              <div class="flex items-center gap-2 px-3 py-2.5 border-b border-gray-200" style="background:#f4f5f7;">
+                <div class="flex gap-[5px] flex-shrink-0">
+                  <span class="w-[9px] h-[9px] rounded-full bg-red-400"></span>
+                  <span class="w-[9px] h-[9px] rounded-full bg-amber-400"></span>
+                  <span class="w-[9px] h-[9px] rounded-full bg-emerald-400"></span>
+                </div>
+                <div class="flex-1 bg-white border border-gray-200 rounded-md px-2 py-[3px] text-[9px] text-gray-400 font-medium truncate leading-none">store-b.com · Products › Edit</div>
+                <div class="flex-shrink-0 flex items-center gap-[3px] bg-amber-50 border border-amber-200 text-amber-600 text-[8px] font-bold px-2 py-[3px] rounded-full leading-none">
+                  <span class="w-[5px] h-[5px] rounded-full bg-amber-500 dot-live-slow"></span>Mismatch
+                </div>
+              </div>
+              <!-- Mismatch alert strip -->
+              <div class="flex items-center gap-2 px-3.5 py-2 border-b border-red-100 bg-red-50">
+                <svg class="w-3 h-3 text-red-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                <span class="text-[9px] text-red-600 font-semibold">Stock doesn't match Store A — needs manual fix</span>
+              </div>
+              <!-- Section label -->
+              <div class="px-3.5 pt-2.5 pb-1 flex items-center gap-1.5">
+                <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 20 20" fill="#7f54b3"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3z"/></svg>
+                <span class="text-[9.5px] font-semibold text-[#7f54b3] uppercase tracking-wider">WooCommerce · Store B</span>
+              </div>
+              <!-- Product name -->
+              <div class="px-3.5 pb-2.5 border-b border-gray-100">
+                <div class="text-[13px] font-bold text-gray-900">Wireless Earbuds</div>
+                <div class="text-[9.5px] text-gray-400 mt-0.5">SKU: WE-001 · Published</div>
+              </div>
+              <!-- Fields -->
+              <div class="px-3.5 py-3 space-y-2.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10.5px] text-gray-500 font-medium">Stock quantity</span>
+                  <div class="flex items-center gap-1.5">
+                    <div class="stock-mismatch bg-amber-50 border border-amber-300 rounded-md px-2.5 py-1 text-[12px] font-mono font-bold text-amber-700 min-w-[40px] text-center">89</div>
+                    <div class="flex items-center gap-0.5 text-[9px] font-bold text-red-500">
+                      <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>≠ 142
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[10.5px] text-gray-500 font-medium">Regular price</span>
+                  <span class="text-[11px] font-semibold text-gray-700">$29.99</span>
+                </div>
+              </div>
+              <!-- Action bar -->
+              <div class="px-3.5 pb-3.5 flex gap-2">
+                <div class="flex-1 bg-[#7f54b3] text-white text-[10px] font-semibold text-center py-1.5 rounded-md cursor-default">Update</div>
+                <div class="px-3 bg-gray-100 text-gray-500 text-[10px] font-medium text-center py-1.5 rounded-md cursor-default">Preview</div>
+              </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════
+                 WINDOW 3 — Store C (back · faded)
+                 bottom:18 left:16 · z:10 · rotate(-2deg)
+            ══════════════════════════════════════════ -->
+            <div class="pain-win pain-win-c pain-win-enter-3 absolute bg-white"
+                 style="bottom:18px;left:16px;width:258px;z-index:10;border-radius:11px;overflow:hidden;border:1px solid #e9eaed;box-shadow:0 10px 24px rgba(0,0,0,0.09),0 2px 6px rgba(0,0,0,0.05);">
+              <!-- Chrome bar -->
+              <div class="flex items-center gap-2 px-3 py-2.5 border-b border-gray-200" style="background:#f7f8f9;">
+                <div class="flex gap-[5px] flex-shrink-0">
+                  <span class="w-[9px] h-[9px] rounded-full bg-red-300"></span>
+                  <span class="w-[9px] h-[9px] rounded-full bg-amber-300"></span>
+                  <span class="w-[9px] h-[9px] rounded-full bg-emerald-300"></span>
+                </div>
+                <div class="flex-1 bg-white border border-gray-200 rounded-md px-2 py-[3px] text-[9px] text-gray-400 font-medium truncate leading-none">store-c.com · Products › Edit</div>
+                <div class="flex-shrink-0 flex items-center gap-[3px] bg-red-50 border border-red-100 text-red-400 text-[8px] font-bold px-2 py-[3px] rounded-full leading-none">
+                  <span class="w-[5px] h-[5px] rounded-full bg-red-400 dot-live-slow" style="animation-delay:0.8s;"></span>Out of Sync
+                </div>
+              </div>
+              <!-- Section label -->
+              <div class="px-3.5 pt-2.5 pb-1 flex items-center gap-1.5">
+                <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 20 20" fill="#9e7cc5"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3z"/></svg>
+                <span class="text-[9.5px] font-semibold text-gray-400 uppercase tracking-wider">WooCommerce · Store C</span>
+              </div>
+              <!-- Product name -->
+              <div class="px-3.5 pb-2.5 border-b border-gray-100">
+                <div class="text-[13px] font-bold text-gray-600">Wireless Earbuds</div>
+                <div class="text-[9.5px] text-gray-400 mt-0.5">SKU: WE-001 · Updated 1 week ago</div>
+              </div>
+              <!-- Fields -->
+              <div class="px-3.5 py-3 space-y-2.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10.5px] text-gray-400 font-medium">Stock quantity</span>
+                  <div class="flex items-center gap-1.5">
+                    <div class="stock-mismatch-b bg-red-50 border border-red-200 rounded-md px-2.5 py-1 text-[12px] font-mono font-bold text-red-500 min-w-[40px] text-center">203</div>
+                    <span class="text-[9px] font-bold text-red-400">← different!</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-[10.5px] text-gray-400 font-medium">Regular price</span>
+                  <span class="text-[11px] font-semibold text-gray-500">$29.99</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════
+                 FLOATING CARD 1 — 3 stores out of sync
+                 (top-right, inside padding, floats)
+            ══════════════════════════════════════════ -->
+            <div class="pain-card-enter anim-float-card absolute flex items-center gap-3 bg-white rounded-xl px-4 py-3 border border-red-100"
+                 style="top:16px;right:16px;z-index:35;box-shadow:0 10px 32px rgba(239,68,68,0.15),0 2px 10px rgba(0,0,0,0.07);white-space:nowrap;">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#fef2f2,#fee2e2);border:1px solid #fca5a5;">
+                <svg class="w-4 h-4 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-[12.5px] font-bold text-gray-900 leading-snug">3 Stores Out of Sync</div>
+                <div class="text-[10px] text-gray-400 mt-0.5">Same SKU · 3 different counts</div>
+              </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════
+                 FLOATING CARD 2 — Time wasted
+                 (bottom-right, above Window C edge)
+            ══════════════════════════════════════════ -->
+            <div class="pain-card-enter anim-float-card2 absolute flex items-center gap-3 bg-white rounded-xl px-4 py-3 border border-orange-100"
+                 style="bottom:24px;right:16px;z-index:35;box-shadow:0 10px 32px rgba(234,88,12,0.12),0 2px 10px rgba(0,0,0,0.06);white-space:nowrap;">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#fff7ed,#fed7aa);border:1px solid #fdba74;">
+                <svg class="w-4 h-4 text-orange-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-[12.5px] font-bold text-gray-900 leading-snug">~3 hrs/week wasted</div>
+                <div class="text-[10px] text-gray-400 mt-0.5">on repeated manual updates</div>
+              </div>
+            </div>
+
+          </div><!-- /illustration container -->
+        </div><!-- /right col -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       HOW IT WORKS — scroll-driven
+  ══════════════════════════════════════════════════════ -->
+
+  <!-- Scroll track: tall enough to drive the animation -->
+  <div id="hiw-track" style="height:300vh; position:relative;">
+
+    <!-- Sticky viewport -->
+    <div id="hiw-sticky" style="position:sticky; top:0; height:100vh; overflow:hidden; background:#fff;">
+      <div style="max-width:1200px; margin:0 auto; padding:2rem 2rem; display:flex; flex-direction:column;">
+
+        <!-- Header (always visible) -->
+        <div id="hiw-header" style="margin-bottom:32px; flex-shrink:0;">
+          <h2 data-reveal class="opacity-0 translate-y-4 transition-all duration-700 text-4xl font-bold text-ink leading-[1.2] tracking-tightest" style="max-width:620px;">
+            Pick Your Store Setup
+          </h2>
+          <p data-reveal class="opacity-0 translate-y-4 transition-all duration-700 text-[16px] text-ink-muted mt-3">
+            Choose the mode that matches how your stores should behave.
+          </p>
+        </div>
+
+        <!-- Stage: fixed-height container, image overlays left columns -->
+        <div id="hiw-stage" style="position:relative; height:790px; flex-shrink:0;">
+
+          <!-- Left columns (sit in normal flow, image covers them initially) -->
+          <div id="hiw-cols" style="display:flex; align-items:flex-start; gap:12px; height:100%; padding-top:195px; padding-right:12px; opacity:0; transition:opacity 0.4s ease;">
+
+            <!-- Toggle column -->
+            <div id="hiw-left" style="display:flex; flex-direction:column; gap:12px; flex-shrink:0; width:140px;">
+
+              <!-- Option A -->
+              <button id="hiw-opt-a" data-hiw-option="0" style="
+                padding:0; border:none; background:none;
+                cursor:pointer; text-align:left; outline:none;">
+                <span id="hiw-lbl-a" style="font-size:14px;font-weight:600;color:#7334C1;transition:color 0.3s;">Shared Stock</span>
+              </button>
+
+              <!-- Option B -->
+              <button id="hiw-opt-b" data-hiw-option="1" style="
+                padding:0; border:none; background:none;
+                cursor:pointer; text-align:left; outline:none;">
+                <span id="hiw-lbl-b" style="font-size:14px;font-weight:400;color:#1a1a2e;transition:color 0.3s, font-weight 0.3s;">Independent</span>
+              </button>
+
+            </div>
+
+            <!-- Info column: full height, overflow visible so panels fade out smoothly instead of clipping -->
+            <div id="hiw-info" style="flex-shrink:0; width:320px; height:100%; overflow:visible; position:relative;">
+
+              <!-- Panel A: vertically centered via JS -->
+              <div id="hiw-info-a" style="position:absolute; top:0; left:0; width:100%; opacity:1; transform:translateY(0); will-change:opacity,transform;">
+                <div style="font-size:32px;font-weight:700;color:#1a1a2e;line-height:1.2;margin-bottom:12px;">Shared Stock Across Stores</div>
+                <div style="display:inline-block;font-size:12px;font-weight:500;color:#7334C1;background:#F5F1FF;border:1px solid #ddd5ff;border-radius:999px;padding:4px 12px;margin-bottom:14px;">For stores that should stay in sync</div>
+                <div style="font-size:14px;color:#6b7280;line-height:1.6;margin-bottom:16px;">Update product data once and keep matching SKUs aligned across other connected stores.</div>
+                <div style="font-size:13px;font-weight:600;color:#1a1a2e;margin-bottom:8px;">Best for:</div>
+                <ul style="list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:6px;">
+                  <li style="font-size:13px;color:#4b5563;">😍 Regional stores</li>
+                  <li style="font-size:13px;color:#4b5563;">😍 Wholesale + retail</li>
+                  <li style="font-size:13px;color:#4b5563;">😍 Branches</li>
+                  <li style="font-size:13px;color:#4b5563;">😍 Duplicate storefronts</li>
+                </ul>
+                <button style="display:inline-flex;align-items:center;padding:10px 20px;background:#7334C1;color:#fff;font-size:14px;font-weight:600;border:1px solid #7334C1;border-radius:999px;cursor:pointer;">Sync My Stores</button>
+              </div>
+
+              <!-- Panel B: starts below, positioned via JS -->
+              <div id="hiw-info-b" style="position:absolute; top:0; left:0; width:100%; opacity:0.25; will-change:opacity,transform;">
+                <div style="font-size:32px;font-weight:700;color:#1a1a2e;line-height:1.2;margin-bottom:12px;">Independent Inventory Mode</div>
+                <div style="display:inline-block;font-size:12px;font-weight:500;color:#7334C1;background:#F5F1FF;border:1px solid #ddd5ff;border-radius:999px;padding:4px 12px;margin-bottom:14px;">For stores that should stay separate</div>
+                <div style="font-size:14px;color:#6b7280;line-height:1.6;margin-bottom:16px;">Manage multiple stores in one Google Sheet while keeping each store fully separate.</div>
+                <div style="font-size:13px;font-weight:600;color:#1a1a2e;margin-bottom:8px;">Best for:</div>
+                <ul style="list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:6px;">
+                  <li style="font-size:13px;color:#4b5563;">😍 Separate brands</li>
+                  <li style="font-size:13px;color:#4b5563;">😍 Agencies</li>
+                  <li style="font-size:13px;color:#4b5563;">😍 Client stores</li>
+                  <li style="font-size:13px;color:#4b5563;">😍 Multi-brand businesses</li>
+                </ul>
+                <button style="display:inline-flex;align-items:center;padding:10px 20px;background:#7334C1;color:#fff;font-size:14px;font-weight:600;border:1px solid #7334C1;border-radius:999px;cursor:pointer;">Manage Stores Separately</button>
+              </div>
+
+            </div>
+
+          </div><!-- /hiw-cols -->
+
+          <!-- Image: absolutely covers entire stage initially, shrinks right on scroll -->
+          <div id="hiw-img" style="
+            position:absolute; top:0; left:0;
+            width:100%; height:790px; box-sizing:border-box;
+            border-radius:16px; border:2px dashed #e5e7eb;
+            background:#f8f8fc;
+            display:flex; flex-direction:column;
+            align-items:center; justify-content:center; gap:12px;
+            text-align:center;">
+            <div style="width:56px;height:56px;border-radius:16px;background:#f1f1f5;border:1px solid #e5e7eb;display:flex;align-items:center;justify-content:center;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            </div>
+            <div>
+              <div style="font-size:13px;font-weight:600;color:#9ca3af;">Product Screenshot</div>
+              <div style="font-size:11px;color:#d1d5db;margin-top:2px;">Pick Your Store Setup</div>
+            </div>
+          </div>
+
+        </div><!-- /stage -->
+      </div><!-- /inner -->
+    </div><!-- /sticky -->
+  </div><!-- /track -->
+  <!-- ══════════════════════════════════════════════════════
+       STACKING FEATURES — bit-flows style sticky cards
+  ══════════════════════════════════════════════════════ -->
+  <section id="features-stack" style="background:#f5f0ff; padding:100px 32px 0;">
+
+    <!-- Header -->
+    <div style="max-width:780px; margin:0 auto 72px; text-align:center;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#ede8ff;border:1px solid rgba(115,52,193,0.25);border-radius:999px;padding:5px 16px;margin-bottom:20px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:#7334C1;display:inline-block;"></span>
+        <span style="font-size:12px;font-weight:600;color:#7334C1;letter-spacing:0.05em;text-transform:uppercase;">Core Features</span>
+      </div>
+      <h2 data-reveal class="opacity-0 translate-y-4 transition-all duration-700" style="font-size:40px;font-weight:800;color:#111827;line-height:1.15;letter-spacing:-0.02em;margin-bottom:16px;">
+        Smart Tools to Supercharge<br>Your Multi-Store Workflow
+      </h2>
+      <p data-reveal class="opacity-0 translate-y-4 transition-all duration-700" style="font-size:17px;color:#4B5563;line-height:1.7;">
+        Every feature is designed around how real WooCommerce store owners actually work — across multiple storefronts, without the chaos.
+      </p>
+    </div>
+
+    <!-- Stacking cards track -->
+    <div id="toolsDiv" style="max-width:1200px; margin:0 auto; padding-bottom:160px;">
+
+      <!-- Card 1 -->
+      <div class="stack-card" style="
+        position:sticky; top:100px;
+        background:#ffffff;
+        border:1px solid rgba(115,52,193,0.18);
+        border-radius:24px; padding:52px 56px;
+        display:flex; align-items:center; gap:56px;
+        margin-bottom:16px;
+        box-shadow:0 4px 32px rgba(115,52,193,0.1), 0 1px 4px rgba(115,52,193,0.06);
+        transform-origin:top center; will-change:transform,opacity;">
+        <div style="flex:1; min-width:0;">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:#ede8ff;border:1px solid rgba(115,52,193,0.2);border-radius:999px;padding:4px 12px;margin-bottom:20px;">
+            <span style="font-size:11px;font-weight:600;color:#7334C1;letter-spacing:0.06em;text-transform:uppercase;">01 — Sync Engine</span>
+          </div>
+          <h3 style="font-size:28px;font-weight:700;color:#111827;line-height:1.25;margin-bottom:12px;">Real-Time Product Sync</h3>
+          <p style="font-size:15px;color:#4B5563;line-height:1.75;margin-bottom:28px;">Edit a product once in Google Sheets and watch it instantly propagate across every connected store. No copy-paste, no manual re-entry — just one source of truth.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <span style="font-size:12px;font-weight:500;color:#7334C1;background:#ede8ff;border:1px solid rgba(115,52,193,0.2);border-radius:999px;padding:5px 14px;">SKU matching</span>
+            <span style="font-size:12px;font-weight:500;color:#7334C1;background:#ede8ff;border:1px solid rgba(115,52,193,0.2);border-radius:999px;padding:5px 14px;">Bulk updates</span>
+            <span style="font-size:12px;font-weight:500;color:#7334C1;background:#ede8ff;border:1px solid rgba(115,52,193,0.2);border-radius:999px;padding:5px 14px;">Field-level control</span>
+          </div>
+        </div>
+        <!-- Image placeholder -->
+        <div style="flex-shrink:0;width:480px;height:300px;border-radius:16px;background:#f5f0ff;border:2px dashed rgba(115,52,193,0.25);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(115,52,193,0.35)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:12px;color:rgba(115,52,193,0.4);font-weight:500;">Feature Image</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="stack-card" style="
+        position:sticky; top:116px;
+        background:#ffffff;
+        border:1px solid rgba(59,130,246,0.18);
+        border-radius:24px; padding:52px 56px;
+        display:flex; align-items:center; gap:56px;
+        margin-bottom:16px;
+        box-shadow:0 4px 32px rgba(59,130,246,0.1), 0 1px 4px rgba(59,130,246,0.06);
+        transform-origin:top center; will-change:transform,opacity;">
+        <div style="flex:1; min-width:0;">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:#eff6ff;border:1px solid rgba(59,130,246,0.2);border-radius:999px;padding:4px 12px;margin-bottom:20px;">
+            <span style="font-size:11px;font-weight:600;color:#2563eb;letter-spacing:0.06em;text-transform:uppercase;">02 — Stock Manager</span>
+          </div>
+          <h3 style="font-size:28px;font-weight:700;color:#111827;line-height:1.25;margin-bottom:12px;">Shared Inventory Control</h3>
+          <p style="font-size:15px;color:#4B5563;line-height:1.75;margin-bottom:28px;">Link stock levels across stores so every sale — regardless of which storefront — automatically deducts from the same pool. Never oversell again.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <span style="font-size:12px;font-weight:500;color:#2563eb;background:#eff6ff;border:1px solid rgba(59,130,246,0.2);border-radius:999px;padding:5px 14px;">Shared pool</span>
+            <span style="font-size:12px;font-weight:500;color:#2563eb;background:#eff6ff;border:1px solid rgba(59,130,246,0.2);border-radius:999px;padding:5px 14px;">Auto-deduct</span>
+            <span style="font-size:12px;font-weight:500;color:#2563eb;background:#eff6ff;border:1px solid rgba(59,130,246,0.2);border-radius:999px;padding:5px 14px;">Oversell prevention</span>
+          </div>
+        </div>
+        <!-- Image placeholder -->
+        <div style="flex-shrink:0;width:480px;height:300px;border-radius:16px;background:#eff6ff;border:2px dashed rgba(59,130,246,0.25);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.35)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:12px;color:rgba(59,130,246,0.4);font-weight:500;">Feature Image</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="stack-card" style="
+        position:sticky; top:132px;
+        background:#ffffff;
+        border:1px solid rgba(16,185,129,0.18);
+        border-radius:24px; padding:52px 56px;
+        display:flex; align-items:center; gap:56px;
+        margin-bottom:16px;
+        box-shadow:0 4px 32px rgba(16,185,129,0.1), 0 1px 4px rgba(16,185,129,0.06);
+        transform-origin:top center; will-change:transform,opacity;">
+        <div style="flex:1; min-width:0;">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:#f0fdf4;border:1px solid rgba(16,185,129,0.2);border-radius:999px;padding:4px 12px;margin-bottom:20px;">
+            <span style="font-size:11px;font-weight:600;color:#059669;letter-spacing:0.06em;text-transform:uppercase;">03 — Per-Store Config</span>
+          </div>
+          <h3 style="font-size:28px;font-weight:700;color:#111827;line-height:1.25;margin-bottom:12px;">Independent Store Settings</h3>
+          <p style="font-size:15px;color:#4B5563;line-height:1.75;margin-bottom:28px;">Give each store its own pricing, tax rules, and product visibility — all managed from the same Google Sheet, without one store's rules bleeding into another.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <span style="font-size:12px;font-weight:500;color:#059669;background:#f0fdf4;border:1px solid rgba(16,185,129,0.2);border-radius:999px;padding:5px 14px;">Per-store pricing</span>
+            <span style="font-size:12px;font-weight:500;color:#059669;background:#f0fdf4;border:1px solid rgba(16,185,129,0.2);border-radius:999px;padding:5px 14px;">Visibility rules</span>
+            <span style="font-size:12px;font-weight:500;color:#059669;background:#f0fdf4;border:1px solid rgba(16,185,129,0.2);border-radius:999px;padding:5px 14px;">Tax overrides</span>
+          </div>
+        </div>
+        <!-- Image placeholder -->
+        <div style="flex-shrink:0;width:480px;height:300px;border-radius:16px;background:#f0fdf4;border:2px dashed rgba(16,185,129,0.25);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(16,185,129,0.35)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:12px;color:rgba(16,185,129,0.4);font-weight:500;">Feature Image</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="stack-card" style="
+        position:sticky; top:148px;
+        background:#ffffff;
+        border:1px solid rgba(245,158,11,0.18);
+        border-radius:24px; padding:52px 56px;
+        display:flex; align-items:center; gap:56px;
+        margin-bottom:16px;
+        box-shadow:0 4px 32px rgba(245,158,11,0.1), 0 1px 4px rgba(245,158,11,0.06);
+        transform-origin:top center; will-change:transform,opacity;">
+        <div style="flex:1; min-width:0;">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:#fffbeb;border:1px solid rgba(245,158,11,0.2);border-radius:999px;padding:4px 12px;margin-bottom:20px;">
+            <span style="font-size:11px;font-weight:600;color:#d97706;letter-spacing:0.06em;text-transform:uppercase;">04 — Google Sheets</span>
+          </div>
+          <h3 style="font-size:28px;font-weight:700;color:#111827;line-height:1.25;margin-bottom:12px;">Sheets as Your Control Center</h3>
+          <p style="font-size:15px;color:#4B5563;line-height:1.75;margin-bottom:28px;">Use Google Sheets as a live dashboard for all your stores. Filter by store, sort by SKU, bulk-edit in the spreadsheet you already know — and push changes instantly.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <span style="font-size:12px;font-weight:500;color:#d97706;background:#fffbeb;border:1px solid rgba(245,158,11,0.2);border-radius:999px;padding:5px 14px;">Live dashboard</span>
+            <span style="font-size:12px;font-weight:500;color:#d97706;background:#fffbeb;border:1px solid rgba(245,158,11,0.2);border-radius:999px;padding:5px 14px;">Per-store tabs</span>
+            <span style="font-size:12px;font-weight:500;color:#d97706;background:#fffbeb;border:1px solid rgba(245,158,11,0.2);border-radius:999px;padding:5px 14px;">Instant push</span>
+          </div>
+        </div>
+        <!-- Image placeholder -->
+        <div style="flex-shrink:0;width:480px;height:300px;border-radius:16px;background:#fffbeb;border:2px dashed rgba(245,158,11,0.25);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(245,158,11,0.35)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:12px;color:rgba(245,158,11,0.4);font-weight:500;">Feature Image</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="stack-card" style="
+        position:sticky; top:164px;
+        background:#ffffff;
+        border:1px solid rgba(168,85,247,0.18);
+        border-radius:24px; padding:52px 56px;
+        display:flex; align-items:center; gap:56px;
+        margin-bottom:16px;
+        box-shadow:0 4px 32px rgba(168,85,247,0.1), 0 1px 4px rgba(168,85,247,0.06);
+        transform-origin:top center; will-change:transform,opacity;">
+        <div style="flex:1; min-width:0;">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:#faf5ff;border:1px solid rgba(168,85,247,0.2);border-radius:999px;padding:4px 12px;margin-bottom:20px;">
+            <span style="font-size:11px;font-weight:600;color:#9333ea;letter-spacing:0.06em;text-transform:uppercase;">05 — Bulk Actions</span>
+          </div>
+          <h3 style="font-size:28px;font-weight:700;color:#111827;line-height:1.25;margin-bottom:12px;">Mass Update Without the Mess</h3>
+          <p style="font-size:15px;color:#4B5563;line-height:1.75;margin-bottom:28px;">Update hundreds of products across multiple stores in a single operation. Prices, stock, descriptions — all at once, with full preview before you push.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <span style="font-size:12px;font-weight:500;color:#9333ea;background:#faf5ff;border:1px solid rgba(168,85,247,0.2);border-radius:999px;padding:5px 14px;">Batch push</span>
+            <span style="font-size:12px;font-weight:500;color:#9333ea;background:#faf5ff;border:1px solid rgba(168,85,247,0.2);border-radius:999px;padding:5px 14px;">Preview changes</span>
+            <span style="font-size:12px;font-weight:500;color:#9333ea;background:#faf5ff;border:1px solid rgba(168,85,247,0.2);border-radius:999px;padding:5px 14px;">Undo support</span>
+          </div>
+        </div>
+        <!-- Image placeholder -->
+        <div style="flex-shrink:0;width:480px;height:300px;border-radius:16px;background:#faf5ff;border:2px dashed rgba(168,85,247,0.25);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(168,85,247,0.35)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:12px;color:rgba(168,85,247,0.4);font-weight:500;">Feature Image</span>
+        </div>
+      </div>
+
+    </div><!-- /toolsDiv -->
+  </section>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
