@@ -1106,7 +1106,107 @@
         </div>
       </div>
 
+      <!-- Card 6 — CTA -->
+      <div class="stack-card" style="
+        position:sticky; top:180px;
+        background:linear-gradient(135deg,#1e0a3c 0%,#3b1173 60%,#5b21b6 100%);
+        border:1px solid rgba(168,85,247,0.3);
+        border-radius:24px; padding:64px 72px;
+        display:flex; align-items:center; justify-content:space-between; gap:56px;
+        margin-bottom:16px;
+        box-shadow:0 8px 48px rgba(115,52,193,0.35), 0 1px 4px rgba(115,52,193,0.2);
+        transform-origin:top center; will-change:transform,opacity;">
+        <!-- Left: text -->
+        <div style="flex:1; min-width:0;">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:4px 14px;margin-bottom:24px;">
+            <span style="width:6px;height:6px;border-radius:50%;background:#a78bfa;display:inline-block;"></span>
+            <span style="font-size:11px;font-weight:600;color:#e9d5ff;letter-spacing:0.08em;text-transform:uppercase;">Your Use Case</span>
+          </div>
+          <h3 style="font-size:34px;font-weight:800;color:#ffffff;line-height:1.2;margin-bottom:16px;letter-spacing:-0.02em;">Don't See Your Exact Setup?</h3>
+          <p style="font-size:16px;color:rgba(233,213,255,0.85);line-height:1.75;margin-bottom:36px;max-width:520px;">Multi-store workflows can vary a lot. Tell us what you're trying to manage.</p>
+          <a href="#" style="
+            display:inline-flex;align-items:center;gap:10px;
+            background:#ffffff;color:#5b21b6;
+            font-size:15px;font-weight:700;
+            padding:14px 28px;border-radius:12px;
+            text-decoration:none;
+            box-shadow:0 4px 20px rgba(0,0,0,0.25);
+            transition:transform 0.15s,box-shadow 0.15s;"
+            onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(0,0,0,0.3)';"
+            onmouseout="this.style.transform='';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.25)';">
+            Request Your Use Case
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <!-- Right: decorative icon -->
+        <div style="flex-shrink:0;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.06);border:2px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;">
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="rgba(233,213,255,0.6)" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        </div>
+      </div>
+
     </div><!-- /toolsDiv -->
+  </section>
+
+  <!-- Messy → Managed Section -->
+  <section style="background:#ffffff; padding:100px 32px;">
+    <div style="max-width:1100px; margin:0 auto; text-align:center;">
+
+      <h2 data-reveal class="opacity-0 translate-y-4 transition-all duration-700" style="font-size:40px;font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:20px;display:inline-flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;">
+        <!-- "Messy" word — struck-through red chip -->
+        <span style="position:relative;display:inline-flex;align-items:center;gap:10px;">
+          <span style="font-size:0.72em;">😖</span>
+          <span style="
+            position:relative;
+            color:#ef4444;
+            background:#fff1f1;
+            border:2px solid rgba(239,68,68,0.25);
+            border-radius:14px;
+            padding:4px 18px 4px 14px;
+            display:inline-block;">
+            Messy
+            <!-- strikethrough line -->
+            <span style="
+              position:absolute;
+              top:50%; left:10%;
+              width:80%; height:3px;
+              background:#ef4444;
+              border-radius:2px;
+              transform:translateY(-50%) rotate(-4deg);
+              opacity:0.7;
+              display:block;"></span>
+          </span>
+        </span>
+
+        <!-- Arrow -->
+        <span style="color:#D1D5DB;font-weight:300;font-size:0.7em;letter-spacing:-0.05em;">⟶</span>
+
+        <!-- "Managed" word — glowing purple gradient chip -->
+        <span style="display:inline-flex;align-items:center;gap:10px;">
+          <span style="
+            background:linear-gradient(135deg,#7334C1 0%,#a855f7 100%);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+            position:relative;
+            padding:4px 18px 4px 14px;
+            display:inline-block;">
+            <!-- glow backdrop -->
+            <span style="
+              position:absolute;inset:0;
+              background:linear-gradient(135deg,rgba(115,52,193,0.1),rgba(168,85,247,0.15));
+              border:2px solid rgba(115,52,193,0.25);
+              border-radius:14px;
+              pointer-events:none;"></span>
+            Managed
+          </span>
+          <span style="font-size:0.72em;">😃</span>
+        </span>
+      </h2>
+
+      <p data-reveal class="opacity-0 translate-y-4 transition-all duration-700" style="font-size:17px;color:#6B7280;line-height:1.7;max-width:600px;margin:0 auto;">
+        See how FlexStock Multi-Store Sync replaces scattered store work with one smarter workflow.
+      </p>
+    </div>
   </section>
 
   <!-- JS -->
