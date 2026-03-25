@@ -23,9 +23,14 @@
   50%       { opacity: .5; transform: scale(.8); }
 }
 
-@keyframes shimmer {
-  from { background-position: -200% center; }
-  to   { background-position:  200% center; }
+/* ── Skeleton illustration utility ──────────────────────── */
+.skel {
+  background: #ebebeb;
+  border-radius: 4px;
+}
+.skel-dark {
+  background: #2e2f44;
+  border-radius: 4px;
 }
 
 /* ── Animation Utility Classes ───────────────────────────── */
@@ -80,63 +85,6 @@
   background-color: #fafbff;
 }
 
-/* ── Pain-points illustration ────────────────────────────── */
-
-/* Per-window hover lift (rotation-aware — each class bakes its own rotate) */
-.pain-win {
-  transition: transform 0.30s cubic-bezier(0.34, 1.4, 0.64, 1),
-              box-shadow 0.30s ease;
-  will-change: transform;
-  cursor: default;
-}
-.pain-win-a         { transform: rotate(-3.5deg); }
-.pain-win-a:hover   { transform: rotate(-3.5deg) translateY(-10px) scale(1.02);
-                      box-shadow: 0 32px 60px rgba(0,0,0,.18), 0 8px 20px rgba(0,0,0,.08) !important; }
-.pain-win-b         { transform: rotate(2.8deg); }
-.pain-win-b:hover   { transform: rotate(2.8deg)  translateY(-10px) scale(1.02);
-                      box-shadow: 0 32px 60px rgba(0,0,0,.18), 0 8px 20px rgba(0,0,0,.08) !important; }
-.pain-win-c         { transform: rotate(-2deg); }
-.pain-win-c:hover   { transform: rotate(-2deg)   translateY(-10px) scale(1.02);
-                      box-shadow: 0 28px 50px rgba(0,0,0,.16), 0 6px 14px rgba(0,0,0,.07) !important; }
-
-/* Marching-ant dashed arrows */
-@keyframes dash-march {
-  to { stroke-dashoffset: -28; }
-}
-.arrow-march { animation: dash-march 0.9s linear infinite; }
-
-/* Wobble for mismatched stock numbers */
-@keyframes stock-wobble {
-  0%, 88%, 100% { transform: rotate(0deg) scale(1); }
-  90%           { transform: rotate(-3deg) scale(1.05); }
-  93%           { transform: rotate(3deg)  scale(1.05); }
-  96%           { transform: rotate(-2deg) scale(1.02); }
-  98%           { transform: rotate(1deg)  scale(1.02); }
-}
-.stock-mismatch { animation: stock-wobble 5s ease-in-out infinite; display: inline-block; }
-.stock-mismatch-b { animation: stock-wobble 5s 0.7s ease-in-out infinite; display: inline-block; }
-
-/* Float variants for alert cards */
-@keyframes floatCard {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-6px); }
-}
-.anim-float-card  { animation: floatCard 3.8s 0.3s ease-in-out infinite; }
-.anim-float-card2 { animation: floatCard 3.8s 1.9s ease-in-out infinite; }
-
-/* Staggered entrance for illustration windows */
-@keyframes winEntrance {
-  from { opacity: 0; transform: translateY(24px) scale(0.96); }
-  to   { opacity: 1; transform: translateY(0)    scale(1); }
-}
-.pain-win-enter-1 { animation: winEntrance 0.55s 0.15s cubic-bezier(0.22,1,0.36,1) both; }
-.pain-win-enter-2 { animation: winEntrance 0.55s 0.32s cubic-bezier(0.22,1,0.36,1) both; }
-.pain-win-enter-3 { animation: winEntrance 0.55s 0.50s cubic-bezier(0.22,1,0.36,1) both; }
-.pain-card-enter  { animation: winEntrance 0.55s 0.65s cubic-bezier(0.22,1,0.36,1) both; }
-
-/* Pulse variants at different rates for Out-of-Sync dots */
-.dot-live-slow  { animation: pulse-dot 2.4s ease-in-out infinite; }
-.dot-live-fast  { animation: pulse-dot 1.0s ease-in-out infinite; }
 
 /* ── How it Works — tab section ─────────────────────────── */
 

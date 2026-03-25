@@ -1,0 +1,251 @@
+<!--
+  Hero Illustration — Skeleton UI (Notion-style)
+  Real text: headers, labels, column titles, sidebar menu, sheet tabs
+  Skeleton: all data values (numbers, store names, prices, timestamps)
+  No opacity fade-out on skeleton elements — uniform shimmer only.
+
+  Embed inside the hero visual wrapper in index.html.
+  Requires: css/main.css (.skel, .skel-dark, anim-* classes)
+-->
+
+<!-- Floating card — left -->
+<div class="hidden lg:flex anim-float absolute -left-8 top-[30%] z-20
+            items-center gap-2.5 bg-white rounded-xl px-3.5 py-3
+            whitespace-nowrap" style="border:1px solid var(--n-border);box-shadow:0 4px 20px rgba(0,0,0,0.08);font-size:12.5px;">
+  <div class="w-9 h-9 rounded-lg flex-shrink-0 skel"></div>
+  <div>
+    <div class="font-semibold text-ink" style="font-size:12.5px;">Stock Synced</div>
+    <div class="skel h-2 w-28 rounded mt-1.5"></div>
+  </div>
+  <div class="skel h-5 w-10 rounded-md"></div>
+</div>
+
+<!-- Floating card — right -->
+<div class="hidden lg:flex anim-float-delay absolute -right-8 top-[20%] z-20
+            items-center gap-2.5 bg-white rounded-xl px-3.5 py-3
+            whitespace-nowrap" style="border:1px solid var(--n-border);box-shadow:0 4px 20px rgba(0,0,0,0.08);font-size:12.5px;">
+  <div class="w-9 h-9 rounded-lg flex-shrink-0 skel"></div>
+  <div>
+    <div class="font-semibold text-ink" style="font-size:12.5px;">Product Added</div>
+    <div class="skel h-2 w-32 rounded mt-1.5"></div>
+  </div>
+</div>
+
+<!-- Wrapper -->
+<div style="background:var(--n-cream);border:1px solid var(--n-border);border-bottom:none;border-radius:12px 12px 0 0;padding:16px 16px 0;box-shadow:0 -2px 40px rgba(0,0,0,0.06);">
+  <div class="bg-white rounded-[10px] border border-gray-200 shadow-sm overflow-hidden">
+
+    <!-- Browser chrome -->
+    <div style="background:var(--n-cream);border-bottom:1px solid var(--n-border);padding:10px 14px;display:flex;align-items:center;gap:10px;">
+      <div class="flex gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+      </div>
+      <div style="flex:1;background:var(--n-border-light,#F0EFED);border:1px solid var(--n-border);border-radius:5px;padding:4px 10px;font-size:11.5px;color:var(--n-muted);display:flex;align-items:center;gap:6px;">
+        <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor" style="flex-shrink:0;opacity:0.4;">
+          <path fill-rule="evenodd" d="M8 1a7 7 0 100 14A7 7 0 008 1zm-.75 10.5a.75.75 0 101.5 0 .75.75 0 00-1.5 0zM8 4.75a.75.75 0 01.75.75v3a.75.75 0 01-1.5 0v-3A.75.75 0 018 4.75z" clip-rule="evenodd"/>
+        </svg>
+        yourstore.com/wp-admin · FlexStock Multistore
+      </div>
+    </div>
+
+    <!-- Illustration area -->
+    <div class="relative" style="min-height:400px;">
+      <div class="absolute inset-0 grid pointer-events-none select-none" style="grid-template-columns:210px 1fr;">
+
+        <!-- Sidebar — real menu labels -->
+        <div class="bg-sidebar py-4 flex flex-col gap-0">
+          <div class="px-4 pb-3 mb-2 border-b border-sidebar-border flex items-center gap-2">
+            <div class="w-5 h-5 bg-brand rounded flex-shrink-0 flex items-center justify-center">
+              <svg class="w-3 h-3" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+            </div>
+            <span class="text-[12px] font-bold text-white">FlexStock</span>
+          </div>
+          <div class="px-4 py-2 text-[11.5px] text-gray-400">Dashboard</div>
+          <div class="px-4 py-2 text-[11.5px] text-purple-300 bg-white/10 border-r-2 border-brand font-medium">Stores</div>
+          <div class="px-4 py-2 text-[11.5px] text-gray-400">Orders</div>
+          <div class="px-4 py-2 text-[11.5px] text-gray-400">Analytics</div>
+          <div class="px-4 py-2 text-[11.5px] text-gray-400">Integrations</div>
+          <div class="px-4 py-2 mt-2 pt-3 border-t border-sidebar-border text-[11.5px] text-gray-400">Settings</div>
+        </div>
+
+        <!-- Main content — real headers, skeleton data -->
+        <div class="bg-white p-5">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <div class="text-[13px] font-bold text-ink">Store Management</div>
+              <div class="skel h-2 w-44 rounded mt-1.5"></div>
+            </div>
+            <div class="bg-brand text-white text-[10px] font-medium px-3 py-1 rounded-full">+ Add Store</div>
+          </div>
+          <div class="grid grid-cols-3 gap-3 mb-4">
+            <div class="bg-gray-50 rounded-lg p-3 text-center">
+              <div class="skel h-6 w-8 rounded mx-auto mb-1.5"></div>
+              <div class="text-[9px] text-gray-400 uppercase tracking-wider">Stores</div>
+            </div>
+            <div class="bg-green-50 rounded-lg p-3 text-center">
+              <div class="h-6 w-8 rounded mx-auto mb-1.5" style="background:linear-gradient(90deg,#d1fae5 25%,#a7f3d0 50%,#d1fae5 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;border-radius:4px;"></div>
+              <div class="text-[9px] text-gray-400 uppercase tracking-wider">Shared</div>
+            </div>
+            <div class="bg-purple-50 rounded-lg p-3 text-center">
+              <div class="h-6 w-8 rounded mx-auto mb-1.5" style="background:linear-gradient(90deg,#ede9fe 25%,#ddd6fe 50%,#ede9fe 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;border-radius:4px;"></div>
+              <div class="text-[9px] text-gray-400 uppercase tracking-wider">Independent</div>
+            </div>
+          </div>
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-2 bg-gray-50 rounded-md px-2.5 py-2">
+              <div class="skel w-5 h-5 rounded-full flex-shrink-0"></div>
+              <div class="skel h-2 w-24 rounded"></div>
+              <div class="ml-auto skel h-4 w-10 rounded-full"></div>
+            </div>
+            <div class="flex items-center gap-2 bg-gray-50 rounded-md px-2.5 py-2">
+              <div class="skel w-5 h-5 rounded-full flex-shrink-0"></div>
+              <div class="skel h-2 w-20 rounded"></div>
+              <div class="ml-auto skel h-4 w-10 rounded-full"></div>
+            </div>
+            <div class="flex items-center gap-2 bg-gray-50 rounded-md px-2.5 py-2">
+              <div class="skel w-5 h-5 rounded-full flex-shrink-0"></div>
+              <div class="skel h-2 w-28 rounded"></div>
+              <div class="ml-auto skel h-4 w-14 rounded-full"></div>
+            </div>
+            <div class="flex items-center gap-2 bg-gray-50 rounded-md px-2.5 py-2">
+              <div class="skel w-5 h-5 rounded-full flex-shrink-0"></div>
+              <div class="skel h-2 w-16 rounded"></div>
+              <div class="ml-auto skel h-4 w-10 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Google Sheet floating card -->
+<div class="hidden lg:flex absolute -top-12 -right-12 z-20 flex-col bg-white border border-gray-200 rounded-xl overflow-hidden anim-float-sheet"
+     style="width:480px; box-shadow: 0 20px 60px rgba(0,0,0,.18), 0 6px 20px rgba(0,0,0,.10);">
+
+  <!-- Title bar — real title, skeleton subtitle -->
+  <div class="flex items-center gap-2.5 px-3 py-2 border-b border-gray-100 bg-white flex-shrink-0">
+    <div class="skel w-6 h-6 rounded flex-shrink-0"></div>
+    <div class="flex-1 min-w-0">
+      <div class="text-[12.5px] font-medium text-ink truncate">FlexStock Inventory — All Stores</div>
+      <div class="skel h-2 w-28 rounded mt-1"></div>
+    </div>
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <div class="inline-flex items-center gap-1 bg-green-50 border border-green-200 rounded px-2 py-0.5 text-[9.5px] font-semibold text-green-700">
+        <span class="w-1 h-1 rounded-full bg-green-500 dot-live"></span> All synced
+      </div>
+      <div class="bg-[#1a73e8] text-white text-[10.5px] font-medium px-3 py-1 rounded-full">Share</div>
+    </div>
+  </div>
+
+  <!-- Menu bar — real labels -->
+  <div class="flex items-center px-3 py-0.5 border-b border-gray-100 bg-white flex-shrink-0">
+    <div class="flex gap-0 text-[11px] text-[#444]">
+      <span class="px-2 py-1 cursor-default">File</span>
+      <span class="px-2 py-1 cursor-default">Edit</span>
+      <span class="px-2 py-1 cursor-default">View</span>
+      <span class="px-2 py-1 cursor-default">Insert</span>
+      <span class="px-2 py-1 cursor-default">Format</span>
+      <span class="px-2 py-1 cursor-default">Data</span>
+      <span class="px-2 py-1 cursor-default">Tools</span>
+    </div>
+  </div>
+
+  <!-- Toolbar skeleton -->
+  <div class="flex items-center gap-1 px-2 py-1.5 border-b border-gray-100 bg-white flex-shrink-0">
+    <div class="skel h-5 w-5 rounded"></div>
+    <div class="skel h-5 w-5 rounded"></div>
+    <div class="w-px h-4 bg-gray-200 mx-0.5"></div>
+    <div class="skel h-5 w-10 rounded"></div>
+    <div class="w-px h-4 bg-gray-200 mx-0.5"></div>
+    <div class="skel h-5 w-5 rounded"></div>
+    <div class="skel h-5 w-5 rounded"></div>
+    <div class="w-px h-4 bg-gray-200 mx-0.5"></div>
+    <div class="skel h-5 w-5 rounded"></div>
+    <div class="skel h-5 w-5 rounded"></div>
+    <div class="skel h-5 w-5 rounded"></div>
+  </div>
+
+  <!-- Formula bar — real cell ref + fx, skeleton formula value -->
+  <div class="flex items-center gap-2 px-2 py-1 border-b border-gray-200 bg-white flex-shrink-0">
+    <div class="text-[11px] text-gray-600 bg-[#f8f9fa] border border-gray-200 rounded px-2 py-0.5 w-11 text-center font-mono flex-shrink-0">D2</div>
+    <span class="text-[12px] text-gray-400 flex-shrink-0 italic" style="font-family:Georgia,serif;">ƒx</span>
+    <div class="flex-1 h-5 rounded" style="background:linear-gradient(90deg,#eff6ff 25%,#dbeafe 50%,#eff6ff 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;border-radius:4px;border:1px solid #bfdbfe;"></div>
+  </div>
+
+  <!-- Grid — real col letters + row 1 labels, skeleton data rows -->
+  <div class="overflow-hidden">
+    <table class="border-collapse w-full">
+      <thead>
+        <tr class="bg-[#f8f9fa]">
+          <th class="w-7 border-r border-b border-[#e2e2e2] py-1.5"></th>
+          <th class="min-w-[72px] border-r border-b border-[#e2e2e2] py-1.5 text-center text-[10px] text-gray-500 font-medium">A</th>
+          <th class="min-w-[120px] border-r border-b border-[#e2e2e2] py-1.5 text-center text-[10px] text-gray-500 font-medium">B</th>
+          <th class="min-w-[52px] border-r border-b border-[#e2e2e2] py-1.5 text-center text-[10px] text-gray-500 font-medium">C</th>
+          <th class="min-w-[62px] border-r border-b border-[#e2e2e2] py-1.5 text-center text-[10px] text-gray-500 font-medium">D</th>
+          <th class="min-w-[76px] border-r border-b border-[#e2e2e2] py-1.5 text-center text-[10px] text-gray-500 font-medium">E</th>
+          <th class="min-w-[60px] border-b border-[#e2e2e2] py-1.5 text-center text-[10px] text-gray-500 font-medium">F</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-[#e8f5e9]">
+          <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">1</td>
+          <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-[11px]">SKU</td>
+          <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-[11px]">Product Name</td>
+          <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-[11px] text-center">Stock</td>
+          <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-[11px] text-center">Price</td>
+          <td class="border-r border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-[11px] text-center">Sync Mode</td>
+          <td class="border-b border-[#c6e6c6] px-2 py-1.5 font-semibold text-[#137333] text-[11px] text-center">Updated</td>
+        </tr>
+        <tr style="outline:2px solid #1a73e8;outline-offset:-1px;position:relative;">
+          <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-[#1a73e8] font-medium py-1.5 bg-[#e8f0fe] select-none">2</td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-10 rounded"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-28 rounded"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-6 rounded mx-auto"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 bg-[#f0fdf4] text-center"><div class="h-2 w-10 rounded mx-auto" style="background:linear-gradient(90deg,#d1fae5 25%,#a7f3d0 50%,#d1fae5 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;border-radius:4px;"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 bg-[#ede9fe] text-center"><div class="h-2 w-10 rounded mx-auto" style="background:linear-gradient(90deg,#ede9fe 25%,#ddd6fe 50%,#ede9fe 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;border-radius:4px;"></div></td>
+          <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-12 rounded mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">3</td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-10 rounded"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-20 rounded"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-6 rounded mx-auto"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-10 rounded mx-auto"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 bg-[#f0f9ff] text-center"><div class="h-2 w-14 rounded mx-auto" style="background:linear-gradient(90deg,#e0f2fe 25%,#bae6fd 50%,#e0f2fe 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;border-radius:4px;"></div></td>
+          <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-10 rounded mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">4</td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-10 rounded"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-24 rounded"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-6 rounded mx-auto"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-10 rounded mx-auto"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 bg-[#ede9fe] text-center"><div class="h-2 w-10 rounded mx-auto" style="background:linear-gradient(90deg,#ede9fe 25%,#ddd6fe 50%,#ede9fe 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;border-radius:4px;"></div></td>
+          <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-8 rounded mx-auto"></div></td>
+        </tr>
+        <tr>
+          <td class="border-r border-b border-[#e2e2e2] text-center text-[9.5px] text-gray-400 py-1.5 bg-[#f8f9fa] select-none">5</td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-10 rounded"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-16 rounded"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-6 rounded mx-auto"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-10 rounded mx-auto"></div></td>
+          <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 bg-[#f0f9ff] text-center"><div class="h-2 w-14 rounded mx-auto" style="background:linear-gradient(90deg,#e0f2fe 25%,#bae6fd 50%,#e0f2fe 75%);background-size:200% 100%;animation:shimmer 1.6s ease-in-out infinite;border-radius:4px;"></div></td>
+          <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-8 rounded mx-auto"></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Sheet tabs — real store names -->
+  <div class="flex items-center border-t border-gray-200 bg-[#f8f9fa] flex-shrink-0 overflow-x-hidden" style="height:28px;">
+    <button class="flex items-center gap-1.5 px-3 h-full text-[10.5px] font-medium text-[#137333] bg-white border-t-2 border-t-[#137333] border-r border-gray-200 whitespace-nowrap flex-shrink-0">Amber's Store</button>
+    <button class="px-3 h-full text-[10.5px] text-gray-500 border-r border-gray-200 whitespace-nowrap flex-shrink-0">TechCraft Co.</button>
+    <button class="px-3 h-full text-[10.5px] text-gray-500 border-r border-gray-200 whitespace-nowrap flex-shrink-0">NatureMade</button>
+    <button class="px-3 h-full text-[10.5px] text-gray-500 border-r border-gray-200 whitespace-nowrap flex-shrink-0">GadgetHub</button>
+    <button class="px-2.5 h-full text-gray-400 text-[16px] leading-none flex-shrink-0">+</button>
+  </div>
+
+</div>
