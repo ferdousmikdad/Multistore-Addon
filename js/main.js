@@ -152,8 +152,8 @@
   // ── Constants ──
   const BRAND_COLOR    = '#7334C1';
   const INK_COLOR      = '#1a1a2e';
-  const IMG_FINAL_W    = 570;
-  const IMG_FINAL_H    = 400;
+  const IMG_FINAL_W    = 530;
+  const IMG_FINAL_H    = 375;
   const IMG_START_H    = 790;
   const PANEL_EXIT_Y   = -400;  // px — how far Panel A travels up before disappearing
   const PANEL_START_B  = 1100;  // px — Panel B initial off-screen position
@@ -168,12 +168,25 @@
   // ── Active option state ──
   let activeOpt = 0;
 
+  const btnA = document.getElementById('hiw-opt-a');
+  const btnB = document.getElementById('hiw-opt-b');
+
   function applyToggle(idx) {
-    activeOpt         = idx;
+    activeOpt = idx;
+
+    // Label colour + weight
     lblA.style.color      = idx === 0 ? BRAND_COLOR : INK_COLOR;
     lblA.style.fontWeight = idx === 0 ? '600' : '400';
     lblB.style.color      = idx === 1 ? BRAND_COLOR : INK_COLOR;
     lblB.style.fontWeight = idx === 1 ? '600' : '400';
+
+    // Active button pill background
+    if (btnA && btnB) {
+      btnA.style.background  = idx === 0 ? '#fff' : 'transparent';
+      btnA.style.boxShadow   = idx === 0 ? '0 1px 3px rgba(0,0,0,0.07)' : 'none';
+      btnB.style.background  = idx === 1 ? '#fff' : 'transparent';
+      btnB.style.boxShadow   = idx === 1 ? '0 1px 3px rgba(0,0,0,0.07)' : 'none';
+    }
   }
 
   // ── Click handler (bound via data attribute, no inline onclick) ──
