@@ -12,43 +12,43 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"SF Pro Display"', '-apple-system', 'BlinkMacSystemFont', '"Plus Jakarta Sans"', '"Segoe UI"', 'Roboto', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
           },
           colors: {
             brand: {
-              DEFAULT: '#7334C1',
-              dark:    '#5e28a8',
-              light:   '#f5f0ff',
-              border:  'rgba(115,52,193,0.2)',
+              DEFAULT: '#8B57C8',
+              dark:    '#7340B5',
+              light:   '#F3ECFF',
+              border:  'rgba(139,87,200,0.2)',
             },
             surface: {
               DEFAULT: '#ffffff',
-              muted:   '#f9fafb',
-              subtle:  '#f3f4f6',
+              muted:   '#f6f9fc',
+              subtle:  '#EEF2F7',
             },
             sidebar: {
-              DEFAULT: '#1e1f2e',
-              border:  '#2d2e42',
+              DEFAULT: '#0d1f35',
+              border:  '#1a3350',
             },
             ink: {
-              DEFAULT: '#111827',
-              muted:   '#4B5563',
-              light:   '#6B7280',
+              DEFAULT: '#0A2540',
+              muted:   '#425466',
+              light:   '#6b8aaa',
             },
           },
           boxShadow: {
-            'brand-sm':  '0 4px 16px rgba(115,52,193,.25)',
-            'brand-md':  '0 8px 24px rgba(115,52,193,.35)',
-            'brand-lg':  '0 10px 40px rgba(115,52,193,.14)',
-            'float':     '0 8px 30px rgba(0,0,0,.12)',
-            'mockup':    '0 40px 80px rgba(0,0,0,.08)',
+            'brand-sm':  '0 4px 16px rgba(139,87,200,.28)',
+            'brand-md':  '0 8px 28px rgba(139,87,200,.38)',
+            'brand-lg':  '0 12px 48px rgba(139,87,200,.16)',
+            'float':     '0 8px 30px rgba(10,37,64,.14)',
+            'mockup':    '0 40px 80px rgba(10,37,64,.10)',
           },
           borderRadius: {
             'xl2': '14px',
             'xl3': '20px',
           },
           letterSpacing: {
-            tightest: '-0.03em',
+            tightest: '-0.035em',
           },
         },
       },
@@ -59,7 +59,12 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<body class="bg-white font-sans text-ink antialiased">
+<body class="bg-white font-sans text-ink antialiased" style="font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO ZONE (topbar + nav + hero share dark bg)
+  ══════════════════════════════════════════════════════ -->
+  <div class="n-hero-zone">
 
   <!-- ══════════════════════════════════════════════════════
        TOPBAR
@@ -74,7 +79,7 @@
   <!-- ══════════════════════════════════════════════════════
        NAVBAR
   ══════════════════════════════════════════════════════ -->
-  <nav id="main-nav" class="sticky top-0 z-50 navbar-blur n-nav transition-shadow duration-200">
+  <nav id="main-nav" class="sticky top-0 z-50 navbar-blur n-nav">
     <div class="n-nav-inner">
 
       <!-- Logo -->
@@ -135,15 +140,12 @@
   <!-- ══════════════════════════════════════════════════════
        HERO
   ══════════════════════════════════════════════════════ -->
-  <section class="relative n-hero" style="padding:100px 32px 0;text-align:center;overflow:hidden;">
+  <section class="relative n-hero" style="padding:110px 32px 0;text-align:center;overflow:hidden;">
 
-    <!-- Very faint radial tint -->
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 900px 400px at 50% -40px,rgba(115,52,193,0.05) 0%,transparent 65%);pointer-events:none;"></div>
-
-    <div style="max-width:860px;margin:0 auto;position:relative;z-index:1;">
+    <div style="max-width:880px;margin:0 auto;position:relative;z-index:1;">
 
       <!-- Badge -->
-      <div class="anim-fade-up" style="margin-bottom:28px;">
+      <div class="anim-fade-up" style="margin-bottom:32px;">
         <span class="n-hero-badge">
           <span class="n-hero-badge-dot"></span>
           New Addon — Multistore for FlexStock
@@ -151,43 +153,43 @@
       </div>
 
       <!-- Headline -->
-      <h1 class="anim-fade-up-d1" style="font-size:clamp(36px,5vw,58px);font-weight:700;line-height:1.12;letter-spacing:-0.03em;color:var(--n-dark);margin-bottom:20px;">
-        Run Multiple <span style="color:var(--brand);">WooCommerce</span><br>
-        <span style="color:var(--brand);">Stores</span> from One
+      <h1 class="anim-fade-up-d1" style="font-size:clamp(38px,5.5vw,66px);font-weight:800;line-height:1.08;letter-spacing:-0.035em;color:#ffffff;margin-bottom:24px;">
+        Run Multiple <span style="color:#D4AAEE;">WooCommerce</span><br>
+        <span style="color:#D4AAEE;">Stores</span> from One
         <span style="display:inline-flex;align-items:center;gap:8px;white-space:nowrap;">
           <img src="assets/googlesheeticon.svg" alt="Google Sheets" class="headline-sheets-icon" />
-          <span style="color:#00A341;">Google Sheet.</span>
+          <span style="color:#34d399;">Google Sheet.</span>
         </span>
       </h1>
 
       <!-- Subheadline -->
-      <p class="anim-fade-up-d2" style="font-size:18px;color:var(--n-muted);line-height:1.65;max-width:600px;margin:0 auto 36px;font-weight:400;letter-spacing:-0.01em;">
+      <p class="anim-fade-up-d2" style="font-size:18px;color:rgba(255,255,255,0.65);line-height:1.7;max-width:580px;margin:0 auto 40px;font-weight:400;letter-spacing:-0.01em;">
         Sync shared stock across stores or keep each store independent —
         all from one smarter Google Sheets workflow.
       </p>
 
       <!-- CTAs -->
-      <div class="anim-fade-up-d3" style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:32px;">
+      <div class="anim-fade-up-d3" style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:36px;">
         <a href="#pricing" class="n-cta-primary">Get Multi-Store Sync</a>
         <a href="#demo" class="n-cta-secondary">Watch Demo</a>
       </div>
 
       <!-- Trust bar -->
-      <div class="anim-fade-up-d4" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:72px;">
+      <div class="anim-fade-up-d4" style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:80px;">
         <div style="display:flex;align-items:center;gap:6px;">
           <div style="display:flex;gap:2px;">
-            <svg width="13" height="13" viewBox="0 0 20 20" fill="#f59e0b"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg width="13" height="13" viewBox="0 0 20 20" fill="#f59e0b"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg width="13" height="13" viewBox="0 0 20 20" fill="#f59e0b"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg width="13" height="13" viewBox="0 0 20 20" fill="#f59e0b"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg width="13" height="13" viewBox="0 0 20 20" fill="#f59e0b"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 20 20" fill="#fbbf24"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 20 20" fill="#fbbf24"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 20 20" fill="#fbbf24"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 20 20" fill="#fbbf24"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg width="13" height="13" viewBox="0 0 20 20" fill="#fbbf24"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
           </div>
-          <span style="font-size:13px;color:var(--n-muted);font-weight:400;">5-Star Rated</span>
+          <span style="font-size:13px;color:rgba(255,255,255,0.45);font-weight:400;">5-Star Rated</span>
         </div>
-        <div style="width:1px;height:14px;background:var(--n-border);"></div>
-        <span style="font-size:13px;color:var(--n-muted);font-weight:400;">35,000+ Creators</span>
-        <div style="width:1px;height:14px;background:var(--n-border);"></div>
-        <span style="font-size:13px;color:var(--n-muted);font-weight:400;">30-Day Money-Back Guarantee</span>
+        <div style="width:1px;height:14px;background:rgba(255,255,255,0.12);"></div>
+        <span style="font-size:13px;color:rgba(255,255,255,0.45);font-weight:400;">35,000+ Creators</span>
+        <div style="width:1px;height:14px;background:rgba(255,255,255,0.12);"></div>
+        <span style="font-size:13px;color:rgba(255,255,255,0.45);font-weight:400;">30-Day Money-Back Guarantee</span>
       </div>
 
     </div><!-- /hero inner -->
@@ -200,7 +202,7 @@
       <!-- Floating card — left -->
       <div class="hidden lg:flex anim-float absolute -left-8 top-[30%] z-20
                   items-center gap-2.5 bg-white rounded-xl px-3.5 py-3
-                  whitespace-nowrap" style="border:1px solid var(--n-border);box-shadow:0 4px 20px rgba(0,0,0,0.08);font-size:12.5px;">
+                  whitespace-nowrap" style="border:1px solid #E3E8EF;box-shadow:0 4px 20px rgba(0,0,0,0.08);font-size:12.5px;">
         <div class="w-9 h-9 rounded-lg flex-shrink-0 skel"></div>
         <div>
           <div class="font-semibold text-ink" style="font-size:12.5px;">Stock Synced</div>
@@ -212,7 +214,7 @@
       <!-- Floating card — right -->
       <div class="hidden lg:flex anim-float-delay absolute -right-8 top-[20%] z-20
                   items-center gap-2.5 bg-white rounded-xl px-3.5 py-3
-                  whitespace-nowrap" style="border:1px solid var(--n-border);box-shadow:0 4px 20px rgba(0,0,0,0.08);font-size:12.5px;">
+                  whitespace-nowrap" style="border:1px solid #E3E8EF;box-shadow:0 4px 20px rgba(0,0,0,0.08);font-size:12.5px;">
         <div class="w-9 h-9 rounded-lg flex-shrink-0 skel"></div>
         <div>
           <div class="font-semibold text-ink" style="font-size:12.5px;">Product Added</div>
@@ -221,17 +223,17 @@
       </div>
 
       <!-- Wrapper -->
-      <div style="background:var(--n-cream);border:1px solid var(--n-border);border-bottom:none;border-radius:12px 12px 0 0;padding:16px 16px 0;box-shadow:0 -2px 40px rgba(0,0,0,0.06);">
+      <div class="hero-visual-wrapper">
         <div class="bg-white rounded-[10px] border border-gray-200 shadow-sm overflow-hidden">
 
           <!-- Browser chrome -->
-          <div style="background:var(--n-cream);border-bottom:1px solid var(--n-border);padding:10px 14px;display:flex;align-items:center;gap:10px;">
+          <div style="background:#f6f9fc;border-bottom:1px solid #E3E8EF;padding:10px 14px;display:flex;align-items:center;gap:10px;">
             <div class="flex gap-1.5">
               <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
             </div>
-            <div style="flex:1;background:var(--n-border-light,#F0EFED);border:1px solid var(--n-border);border-radius:5px;padding:4px 10px;font-size:11.5px;color:var(--n-muted);display:flex;align-items:center;gap:6px;">
+            <div style="flex:1;background:#EEF2F7;border:1px solid #E3E8EF;border-radius:5px;padding:4px 10px;font-size:11.5px;color:#425466;display:flex;align-items:center;gap:6px;">
               <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor" style="flex-shrink:0;opacity:0.4;">
                 <path fill-rule="evenodd" d="M8 1a7 7 0 100 14A7 7 0 008 1zm-.75 10.5a.75.75 0 101.5 0 .75.75 0 00-1.5 0zM8 4.75a.75.75 0 01.75.75v3a.75.75 0 01-1.5 0v-3A.75.75 0 018 4.75z" clip-rule="evenodd"/>
               </svg>
@@ -248,13 +250,13 @@
               <!-- Sidebar — real menu labels -->
               <div class="bg-sidebar py-4 flex flex-col gap-0">
                 <div class="px-4 pb-3 mb-2 border-b border-sidebar-border flex items-center gap-2">
-                  <div class="w-5 h-5 bg-brand rounded flex-shrink-0 flex items-center justify-center">
+                  <div class="w-5 h-5 rounded flex-shrink-0 flex items-center justify-center" style="background:#8B57C8;">
                     <svg class="w-3 h-3" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
                   </div>
                   <span class="text-[12px] font-bold text-white">FlexStock</span>
                 </div>
                 <div class="px-4 py-2 text-[11.5px] text-gray-400">Dashboard</div>
-                <div class="px-4 py-2 text-[11.5px] text-purple-300 bg-white/10 border-r-2 border-brand font-medium">Stores</div>
+                <div class="px-4 py-2 text-[11.5px] text-indigo-300 bg-white/10 border-r-2 font-medium" style="border-color:#8B57C8;">Stores</div>
                 <div class="px-4 py-2 text-[11.5px] text-gray-400">Orders</div>
                 <div class="px-4 py-2 text-[11.5px] text-gray-400">Analytics</div>
                 <div class="px-4 py-2 text-[11.5px] text-gray-400">Integrations</div>
@@ -269,7 +271,7 @@
                     <div class="text-[13px] font-bold text-ink">Store Management</div>
                     <div class="skel h-2 w-44 rounded mt-1.5"></div>
                   </div>
-                  <div class="bg-brand text-white text-[10px] font-medium px-3 py-1 rounded-full">+ Add Store</div>
+                  <div class="text-white text-[10px] font-medium px-3 py-1 rounded-full" style="background:#8B57C8;">+ Add Store</div>
                 </div>
 
                 <!-- Stat cards — real labels, skeleton numbers -->
@@ -283,7 +285,7 @@
                     <div class="text-[9px] text-gray-400 uppercase tracking-wider">Shared</div>
                   </div>
                   <div class="bg-purple-50 rounded-lg p-3 text-center">
-                    <div class="h-6 w-8 rounded mx-auto mb-1.5" style="background:#ede9fe;border-radius:4px;"></div>
+                    <div class="h-6 w-8 rounded mx-auto mb-1.5" style="background:#F3ECFF;border-radius:4px;"></div>
                     <div class="text-[9px] text-gray-400 uppercase tracking-wider">Independent</div>
                   </div>
                 </div>
@@ -404,7 +406,7 @@
                 <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-28 rounded"></div></td>
                 <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-6 rounded mx-auto"></div></td>
                 <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 bg-[#f0fdf4] text-center"><div class="h-2 w-10 rounded mx-auto" style="background:#d1fae5;border-radius:4px;"></div></td>
-                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 bg-[#ede9fe] text-center"><div class="h-2 w-10 rounded mx-auto" style="background:#ede9fe;border-radius:4px;"></div></td>
+                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 bg-[#ede9fe] text-center"><div class="h-2 w-10 rounded mx-auto" style="background:#F3ECFF;border-radius:4px;"></div></td>
                 <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-12 rounded mx-auto"></div></td>
               </tr>
               <!-- Rows 3–5: skeleton data -->
@@ -423,7 +425,7 @@
                 <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5"><div class="skel h-2 w-24 rounded"></div></td>
                 <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-6 rounded mx-auto"></div></td>
                 <td class="border-r border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-10 rounded mx-auto"></div></td>
-                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 bg-[#ede9fe] text-center"><div class="h-2 w-10 rounded mx-auto" style="background:#ede9fe;border-radius:4px;"></div></td>
+                <td class="border-r border-b border-[#e2e2e2] px-1.5 py-1.5 bg-[#ede9fe] text-center"><div class="h-2 w-10 rounded mx-auto" style="background:#F3ECFF;border-radius:4px;"></div></td>
                 <td class="border-b border-[#e2e2e2] px-2 py-1.5 text-center"><div class="skel h-2 w-8 rounded mx-auto"></div></td>
               </tr>
               <tr>
@@ -454,13 +456,15 @@
 
   </section><!-- /hero -->
 
+  </div><!-- /n-hero-zone -->
+
   <!-- ══════════════════════════════════════════════════════
        PAIN POINTS
   ══════════════════════════════════════════════════════ -->
-  <section id="pain-points" class="relative px-8 overflow-hidden n-section" style="background:var(--n-cream);">
+  <section id="pain-points" class="relative px-8 overflow-hidden n-section" style="background:#ffffff;">
 
     <!-- Subtle background radial tint -->
-    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 900px 700px at 65% 55%, rgba(239,68,68,0.035) 0%, transparent 65%);"></div>
+    <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 900px 700px at 65% 55%, rgba(239,68,68,0.03) 0%, transparent 65%);"></div>
 
     <div class="max-w-[1140px] mx-auto relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -579,7 +583,7 @@
             </div>
             <!-- Store label -->
             <div class="px-4 pt-3 pb-1 flex items-center gap-1.5">
-              <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 20 20" fill="#7f54b3"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3z"/></svg>
+              <svg class="w-3 h-3 flex-shrink-0" viewBox="0 0 20 20" fill="#8B57C8"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3z"/></svg>
               <span class="text-[9.5px] font-semibold text-[#7f54b3] uppercase tracking-wider">WooCommerce · Store A</span>
             </div>
             <!-- Product name -->
@@ -612,7 +616,7 @@
             </div>
             <!-- Actions -->
             <div class="px-4 pb-4 flex gap-2">
-              <div class="flex-1 bg-[#7f54b3] text-white text-[10.5px] font-semibold text-center py-1.5 rounded-md">Update</div>
+              <div class="flex-1 text-white text-[10.5px] font-semibold text-center py-1.5 rounded-md" style="background:#8B57C8;">Update</div>
               <div class="px-3 bg-gray-100 text-gray-500 text-[10.5px] text-center py-1.5 rounded-md">Preview</div>
             </div>
           </div>
@@ -653,7 +657,7 @@
   <div id="hiw-track" style="height:300vh; position:relative;">
 
     <!-- Sticky viewport -->
-    <div id="hiw-sticky" style="position:sticky; top:0; height:100vh; overflow:hidden; background:#fff;">
+    <div id="hiw-sticky" style="position:sticky; top:0; height:100vh; overflow:hidden; background:#f6f9fc;">
       <div style="max-width:1140px; margin:0 auto; padding:2rem 2rem; display:flex; flex-direction:column;">
 
         <!-- Header (always visible) -->
@@ -673,21 +677,21 @@
             <div id="hiw-left" style="display:flex; flex-direction:column; gap:12px; flex-shrink:0; width:140px;">
 
               <!-- Segmented toggle wrapper -->
-              <div style="display:inline-flex;flex-direction:column;gap:2px;background:var(--n-cream);border:1px solid var(--n-border);border-radius:8px;padding:3px;">
+              <div style="display:inline-flex;flex-direction:column;gap:2px;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:8px;padding:3px;">
 
                 <!-- Option A -->
                 <button id="hiw-opt-a" data-hiw-option="0" style="
                   padding:7px 14px; border:none; background:#fff;
                   border-radius:6px; cursor:pointer; text-align:left; outline:none;
                   box-shadow:0 1px 3px rgba(0,0,0,0.07);">
-                  <span id="hiw-lbl-a" style="font-size:13px;font-weight:600;color:#7334C1;transition:color 0.2s;white-space:nowrap;">Shared Stock</span>
+                  <span id="hiw-lbl-a" style="font-size:13px;font-weight:600;color:#8B57C8;transition:color 0.2s;white-space:nowrap;">Shared Stock</span>
                 </button>
 
                 <!-- Option B -->
                 <button id="hiw-opt-b" data-hiw-option="1" style="
                   padding:7px 14px; border:none; background:transparent;
                   border-radius:6px; cursor:pointer; text-align:left; outline:none;">
-                  <span id="hiw-lbl-b" style="font-size:13px;font-weight:400;color:var(--n-dark);transition:color 0.2s;white-space:nowrap;">Independent</span>
+                  <span id="hiw-lbl-b" style="font-size:13px;font-weight:400;color:#0A2540;transition:color 0.2s;white-space:nowrap;">Independent</span>
                 </button>
 
               </div>
@@ -699,32 +703,32 @@
 
               <!-- Panel A: vertically centered via JS -->
               <div id="hiw-info-a" style="position:absolute; top:0; left:0; width:100%; opacity:1; transform:translateY(0); will-change:opacity,transform;">
-                <div style="font-size:28px;font-weight:700;color:var(--n-dark);line-height:1.2;letter-spacing:-0.02em;margin-bottom:14px;">Shared Stock Across Stores</div>
-                <div style="margin-bottom:16px;"><span style="font-size:11px;font-weight:600;color:var(--brand);background:var(--brand-light);border:1px solid var(--brand-border);border-radius:4px;padding:3px 9px;letter-spacing:0.05em;text-transform:uppercase;">For stores that should stay in sync</span></div>
-                <div style="font-size:14px;color:var(--n-muted);line-height:1.7;margin-bottom:20px;">Update product data once and keep matching SKUs aligned across other connected stores.</div>
-                <div style="font-size:11px;font-weight:600;color:var(--n-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;">Best for</div>
+                <div style="font-size:28px;font-weight:700;color:#0A2540;line-height:1.2;letter-spacing:-0.02em;margin-bottom:14px;">Shared Stock Across Stores</div>
+                <div style="margin-bottom:16px;"><span style="font-size:11px;font-weight:600;color:#8B57C8;background:#F3ECFF;border:1px solid rgba(139,87,200,0.2);border-radius:4px;padding:3px 9px;letter-spacing:0.05em;text-transform:uppercase;">For stores that should stay in sync</span></div>
+                <div style="font-size:14px;color:#425466;line-height:1.7;margin-bottom:20px;">Update product data once and keep matching SKUs aligned across other connected stores.</div>
+                <div style="font-size:11px;font-weight:600;color:#425466;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;">Best for</div>
                 <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:8px;">
-                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--n-text);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Regional stores</li>
-                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--n-text);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Wholesale + retail</li>
-                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--n-text);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Branches</li>
-                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--n-text);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Duplicate storefronts</li>
+                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#1a1f2e;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Regional stores</li>
+                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#1a1f2e;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Wholesale + retail</li>
+                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#1a1f2e;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Branches</li>
+                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#1a1f2e;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Duplicate storefronts</li>
                 </ul>
-                <a href="#pricing" style="display:inline-flex;align-items:center;gap:8px;padding:9px 20px;background:var(--n-dark);color:#fff;font-size:14px;font-weight:500;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:background 0.12s;">Sync My Stores <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="#pricing" style="display:inline-flex;align-items:center;gap:8px;padding:9px 20px;background:#0A2540;color:#fff;font-size:14px;font-weight:500;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:background 0.12s;">Sync My Stores <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
               </div>
 
               <!-- Panel B: starts below, positioned via JS -->
               <div id="hiw-info-b" style="position:absolute; top:0; left:0; width:100%; opacity:0.25; will-change:opacity,transform;">
-                <div style="font-size:28px;font-weight:700;color:var(--n-dark);line-height:1.2;letter-spacing:-0.02em;margin-bottom:14px;">Independent Inventory Mode</div>
-                <div style="margin-bottom:16px;"><span style="font-size:11px;font-weight:600;color:var(--brand);background:var(--brand-light);border:1px solid var(--brand-border);border-radius:4px;padding:3px 9px;letter-spacing:0.05em;text-transform:uppercase;">For stores that should stay separate</span></div>
-                <div style="font-size:14px;color:var(--n-muted);line-height:1.7;margin-bottom:20px;">Manage multiple stores in one Google Sheet while keeping each store fully separate.</div>
-                <div style="font-size:11px;font-weight:600;color:var(--n-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;">Best for</div>
+                <div style="font-size:28px;font-weight:700;color:#0A2540;line-height:1.2;letter-spacing:-0.02em;margin-bottom:14px;">Independent Inventory Mode</div>
+                <div style="margin-bottom:16px;"><span style="font-size:11px;font-weight:600;color:#8B57C8;background:#F3ECFF;border:1px solid rgba(139,87,200,0.2);border-radius:4px;padding:3px 9px;letter-spacing:0.05em;text-transform:uppercase;">For stores that should stay separate</span></div>
+                <div style="font-size:14px;color:#425466;line-height:1.7;margin-bottom:20px;">Manage multiple stores in one Google Sheet while keeping each store fully separate.</div>
+                <div style="font-size:11px;font-weight:600;color:#425466;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;">Best for</div>
                 <ul style="list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:8px;">
-                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--n-text);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Separate brands</li>
-                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--n-text);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Agencies</li>
-                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--n-text);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Client stores</li>
-                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--n-text);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Multi-brand businesses</li>
+                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#1a1f2e;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Separate brands</li>
+                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#1a1f2e;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Agencies</li>
+                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#1a1f2e;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Client stores</li>
+                  <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#1a1f2e;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg>Multi-brand businesses</li>
                 </ul>
-                <a href="#pricing" style="display:inline-flex;align-items:center;gap:8px;padding:9px 20px;background:var(--n-dark);color:#fff;font-size:14px;font-weight:500;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:background 0.12s;">Manage Stores Separately <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="#pricing" style="display:inline-flex;align-items:center;gap:8px;padding:9px 20px;background:#0A2540;color:#fff;font-size:14px;font-weight:500;border:none;border-radius:6px;cursor:pointer;text-decoration:none;transition:background 0.12s;">Manage Stores Separately <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
               </div>
 
             </div>
@@ -735,20 +739,20 @@
           <div id="hiw-img" style="
             position:absolute; top:0; left:0;
             width:100%; height:790px; box-sizing:border-box;
-            border-radius:12px; border:1px solid var(--n-border);
-            background:var(--n-cream);
+            border-radius:12px; border:1px solid #E3E8EF;
+            background:#f6f9fc;
             display:flex; flex-direction:column;
             align-items:center; justify-content:center; gap:16px;
             text-align:center; overflow:hidden;">
             <!-- Dot grid overlay -->
-            <div style="position:absolute;inset:0;background-image:radial-gradient(var(--n-border) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;opacity:0.7;"></div>
+            <div style="position:absolute;inset:0;background-image:radial-gradient(#C8D6E5 1px,transparent 1px);background-size:28px 28px;pointer-events:none;opacity:0.7;"></div>
             <!-- Center icon -->
-            <div style="position:relative;z-index:1;width:64px;height:64px;border-radius:12px;background:#fff;border:1px solid var(--n-border);box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--n-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <div style="position:relative;z-index:1;width:64px;height:64px;border-radius:12px;background:#fff;border:1px solid #E3E8EF;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#425466" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
             </div>
             <div style="position:relative;z-index:1;">
-              <div style="font-size:13px;font-weight:500;color:var(--n-muted);">Pick Your Store Setup</div>
-              <div style="font-size:12px;color:var(--n-border);margin-top:4px;">Scroll to explore both modes</div>
+              <div style="font-size:13px;font-weight:500;color:#425466;">Pick Your Store Setup</div>
+              <div style="font-size:12px;color:#c8d6e5;margin-top:4px;">Scroll to explore both modes</div>
             </div>
           </div>
 
@@ -759,7 +763,7 @@
   <!-- ══════════════════════════════════════════════════════
        STACKING FEATURES — bit-flows style sticky cards
   ══════════════════════════════════════════════════════ -->
-  <section id="features-stack" style="background:#fff; padding:100px 32px 0;">
+  <section id="features-stack" style="background:#f6f9fc; padding:100px 32px 0;">
 
     <!-- Header -->
     <div style="max-width:780px; margin:0 auto 72px; text-align:center;">
@@ -781,28 +785,28 @@
       <div class="stack-card" style="
         position:sticky; top:100px;
         background:#fff;
-        border:1px solid #ddd2f0;
+        border:1px solid #d5d3ff;
         border-radius:12px; padding:44px 48px;
         display:flex; align-items:center; gap:52px;
         margin-bottom:12px;
-        box-shadow:0 1px 4px rgba(115,52,193,0.07);
+        box-shadow:0 1px 4px rgba(139,87,200,0.07);
         transform-origin:top center; will-change:transform,opacity;">
         <div style="flex:1; min-width:0;">
           <div style="margin-bottom:18px;">
-            <span style="font-size:11px;font-weight:600;color:var(--brand);background:var(--brand-light);border:1px solid var(--brand-border);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">01 — Sync Engine</span>
+            <span style="font-size:11px;font-weight:600;color:#8B57C8;background:#F3ECFF;border:1px solid rgba(139,87,200,0.2);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">01 — Sync Engine</span>
           </div>
-          <h3 style="font-size:24px;font-weight:700;color:var(--n-dark);line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Real-Time Product Sync</h3>
-          <p style="font-size:15px;color:var(--n-muted);line-height:1.75;margin-bottom:28px;">Edit a product once in Google Sheets and watch it instantly propagate across every connected store. No copy-paste, no manual re-entry — just one source of truth.</p>
+          <h3 style="font-size:24px;font-weight:700;color:#0A2540;line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Real-Time Product Sync</h3>
+          <p style="font-size:15px;color:#425466;line-height:1.75;margin-bottom:28px;">Edit a product once in Google Sheets and watch it instantly propagate across every connected store. No copy-paste, no manual re-entry — just one source of truth.</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">SKU matching</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Bulk updates</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Field-level control</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">SKU matching</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Bulk updates</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Field-level control</span>
           </div>
         </div>
         <!-- Image placeholder -->
-        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:var(--n-cream);border:1px dashed var(--n-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--n-border)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:11.5px;color:var(--n-border);font-weight:500;">Feature Image</span>
+        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:#f6f9fc;border:1px dashed #C8D6E5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E3E8EF" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:11.5px;color:#c8d6e5;font-weight:500;">Feature Image</span>
         </div>
       </div>
 
@@ -810,7 +814,7 @@
       <div class="stack-card" style="
         position:sticky; top:116px;
         background:#fff;
-        border:1px solid #c8dcef;
+        border:1px solid #c8d8f0;
         border-radius:12px; padding:44px 48px;
         display:flex; align-items:center; gap:52px;
         margin-bottom:12px;
@@ -818,20 +822,20 @@
         transform-origin:top center; will-change:transform,opacity;">
         <div style="flex:1; min-width:0;">
           <div style="margin-bottom:18px;">
-            <span style="font-size:11px;font-weight:600;color:var(--brand);background:var(--brand-light);border:1px solid var(--brand-border);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">02 — Stock Manager</span>
+            <span style="font-size:11px;font-weight:600;color:#8B57C8;background:#F3ECFF;border:1px solid rgba(139,87,200,0.2);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">02 — Stock Manager</span>
           </div>
-          <h3 style="font-size:24px;font-weight:700;color:var(--n-dark);line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Shared Inventory Control</h3>
-          <p style="font-size:15px;color:var(--n-muted);line-height:1.75;margin-bottom:28px;">Link stock levels across stores so every sale — regardless of which storefront — automatically deducts from the same pool. Never oversell again.</p>
+          <h3 style="font-size:24px;font-weight:700;color:#0A2540;line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Shared Inventory Control</h3>
+          <p style="font-size:15px;color:#425466;line-height:1.75;margin-bottom:28px;">Link stock levels across stores so every sale — regardless of which storefront — automatically deducts from the same pool. Never oversell again.</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Shared pool</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Auto-deduct</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Oversell prevention</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Shared pool</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Auto-deduct</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Oversell prevention</span>
           </div>
         </div>
         <!-- Image placeholder -->
-        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:var(--n-cream);border:1px dashed var(--n-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--n-border)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:11.5px;color:var(--n-border);font-weight:500;">Feature Image</span>
+        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:#f6f9fc;border:1px dashed #C8D6E5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E3E8EF" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:11.5px;color:#c8d6e5;font-weight:500;">Feature Image</span>
         </div>
       </div>
 
@@ -847,20 +851,20 @@
         transform-origin:top center; will-change:transform,opacity;">
         <div style="flex:1; min-width:0;">
           <div style="margin-bottom:18px;">
-            <span style="font-size:11px;font-weight:600;color:var(--brand);background:var(--brand-light);border:1px solid var(--brand-border);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">03 — Per-Store Config</span>
+            <span style="font-size:11px;font-weight:600;color:#8B57C8;background:#F3ECFF;border:1px solid rgba(139,87,200,0.2);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">03 — Per-Store Config</span>
           </div>
-          <h3 style="font-size:24px;font-weight:700;color:var(--n-dark);line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Independent Store Settings</h3>
-          <p style="font-size:15px;color:var(--n-muted);line-height:1.75;margin-bottom:28px;">Give each store its own pricing, tax rules, and product visibility — all managed from the same Google Sheet, without one store's rules bleeding into another.</p>
+          <h3 style="font-size:24px;font-weight:700;color:#0A2540;line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Independent Store Settings</h3>
+          <p style="font-size:15px;color:#425466;line-height:1.75;margin-bottom:28px;">Give each store its own pricing, tax rules, and product visibility — all managed from the same Google Sheet, without one store's rules bleeding into another.</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Per-store pricing</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Visibility rules</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Tax overrides</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Per-store pricing</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Visibility rules</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Tax overrides</span>
           </div>
         </div>
         <!-- Image placeholder -->
-        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:var(--n-cream);border:1px dashed var(--n-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--n-border)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:11.5px;color:var(--n-border);font-weight:500;">Feature Image</span>
+        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:#f6f9fc;border:1px dashed #C8D6E5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E3E8EF" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:11.5px;color:#c8d6e5;font-weight:500;">Feature Image</span>
         </div>
       </div>
 
@@ -876,20 +880,20 @@
         transform-origin:top center; will-change:transform,opacity;">
         <div style="flex:1; min-width:0;">
           <div style="margin-bottom:18px;">
-            <span style="font-size:11px;font-weight:600;color:var(--brand);background:var(--brand-light);border:1px solid var(--brand-border);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">04 — Google Sheets</span>
+            <span style="font-size:11px;font-weight:600;color:#8B57C8;background:#F3ECFF;border:1px solid rgba(139,87,200,0.2);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">04 — Google Sheets</span>
           </div>
-          <h3 style="font-size:24px;font-weight:700;color:var(--n-dark);line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Sheets as Your Control Center</h3>
-          <p style="font-size:15px;color:var(--n-muted);line-height:1.75;margin-bottom:28px;">Use Google Sheets as a live dashboard for all your stores. Filter by store, sort by SKU, bulk-edit in the spreadsheet you already know — and push changes instantly.</p>
+          <h3 style="font-size:24px;font-weight:700;color:#0A2540;line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Sheets as Your Control Center</h3>
+          <p style="font-size:15px;color:#425466;line-height:1.75;margin-bottom:28px;">Use Google Sheets as a live dashboard for all your stores. Filter by store, sort by SKU, bulk-edit in the spreadsheet you already know — and push changes instantly.</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Live dashboard</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Per-store tabs</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Instant push</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Live dashboard</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Per-store tabs</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Instant push</span>
           </div>
         </div>
         <!-- Image placeholder -->
-        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:var(--n-cream);border:1px dashed var(--n-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--n-border)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:11.5px;color:var(--n-border);font-weight:500;">Feature Image</span>
+        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:#f6f9fc;border:1px dashed #C8D6E5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E3E8EF" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:11.5px;color:#c8d6e5;font-weight:500;">Feature Image</span>
         </div>
       </div>
 
@@ -905,32 +909,32 @@
         transform-origin:top center; will-change:transform,opacity;">
         <div style="flex:1; min-width:0;">
           <div style="margin-bottom:18px;">
-            <span style="font-size:11px;font-weight:600;color:var(--brand);background:var(--brand-light);border:1px solid var(--brand-border);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">05 — Bulk Actions</span>
+            <span style="font-size:11px;font-weight:600;color:#8B57C8;background:#F3ECFF;border:1px solid rgba(139,87,200,0.2);border-radius:4px;padding:3px 9px;letter-spacing:0.06em;text-transform:uppercase;">05 — Bulk Actions</span>
           </div>
-          <h3 style="font-size:24px;font-weight:700;color:var(--n-dark);line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Mass Update Without the Mess</h3>
-          <p style="font-size:15px;color:var(--n-muted);line-height:1.75;margin-bottom:28px;">Update hundreds of products across multiple stores in a single operation. Prices, stock, descriptions — all at once, with full preview before you push.</p>
+          <h3 style="font-size:24px;font-weight:700;color:#0A2540;line-height:1.25;letter-spacing:-0.02em;margin-bottom:10px;">Mass Update Without the Mess</h3>
+          <p style="font-size:15px;color:#425466;line-height:1.75;margin-bottom:28px;">Update hundreds of products across multiple stores in a single operation. Prices, stock, descriptions — all at once, with full preview before you push.</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Batch push</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Preview changes</span>
-            <span style="font-size:11px;font-weight:600;color:var(--n-muted);background:var(--n-cream);border:1px solid var(--n-border);border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Undo support</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Batch push</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Preview changes</span>
+            <span style="font-size:11px;font-weight:600;color:#425466;background:#f6f9fc;border:1px solid #E3E8EF;border-radius:4px;padding:4px 10px;letter-spacing:0.04em;">Undo support</span>
           </div>
         </div>
         <!-- Image placeholder -->
-        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:var(--n-cream);border:1px dashed var(--n-border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--n-border)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          <span style="font-size:11.5px;color:var(--n-border);font-weight:500;">Feature Image</span>
+        <div style="flex-shrink:0;width:460px;height:280px;border-radius:10px;background:#f6f9fc;border:1px dashed #C8D6E5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E3E8EF" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span style="font-size:11.5px;color:#c8d6e5;font-weight:500;">Feature Image</span>
         </div>
       </div>
 
       <!-- Card 6 — CTA -->
       <div class="stack-card" style="
         position:sticky; top:180px;
-        background:#191919;
-        border:1px solid #2a2a28;
+        background:#0A2540;
+        border:1px solid #1a3350;
         border-radius:12px; padding:56px 64px;
         display:flex; align-items:center; justify-content:space-between; gap:56px;
         margin-bottom:12px;
-        box-shadow:0 0 0 1px rgba(115,52,193,0.15), 0 8px 40px rgba(115,52,193,0.18);
+        box-shadow:0 0 0 1px rgba(139,87,200,0.15), 0 8px 40px rgba(139,87,200,0.18);
         transform-origin:top center; will-change:transform,opacity;">
         <!-- Left: text -->
         <div style="flex:1; min-width:0;">
@@ -946,15 +950,15 @@
         </div>
         <!-- Right: decorative grid -->
         <div style="flex-shrink:0;width:180px;height:180px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;opacity:0.25;">
-          <div style="background:#7334C1;border-radius:6px;"></div>
-          <div style="background:#7334C1;border-radius:6px;opacity:0.5;"></div>
-          <div style="background:#7334C1;border-radius:6px;opacity:0.3;"></div>
-          <div style="background:#7334C1;border-radius:6px;opacity:0.4;"></div>
+          <div style="background:#8B57C8;border-radius:6px;"></div>
+          <div style="background:#8B57C8;border-radius:6px;opacity:0.5;"></div>
+          <div style="background:#8B57C8;border-radius:6px;opacity:0.3;"></div>
+          <div style="background:#8B57C8;border-radius:6px;opacity:0.4;"></div>
           <div style="background:#fff;border-radius:6px;"></div>
-          <div style="background:#7334C1;border-radius:6px;opacity:0.6;"></div>
-          <div style="background:#7334C1;border-radius:6px;opacity:0.2;"></div>
-          <div style="background:#7334C1;border-radius:6px;opacity:0.5;"></div>
-          <div style="background:#7334C1;border-radius:6px;"></div>
+          <div style="background:#8B57C8;border-radius:6px;opacity:0.6;"></div>
+          <div style="background:#8B57C8;border-radius:6px;opacity:0.2;"></div>
+          <div style="background:#8B57C8;border-radius:6px;opacity:0.5;"></div>
+          <div style="background:#8B57C8;border-radius:6px;"></div>
         </div>
       </div>
 
@@ -962,7 +966,7 @@
   </section>
 
   <!-- Messy → Managed Section -->
-  <section style="background:var(--n-cream); padding:120px 32px;">
+  <section style="background:#ffffff; padding:120px 32px;">
     <div style="max-width:1060px; margin:0 auto;">
 
       <!-- Section header -->
@@ -970,13 +974,13 @@
         <div style="margin-bottom:18px;">
           <span class="n-badge">Before &amp; After</span>
         </div>
-        <h2 style="font-size:clamp(32px,3.8vw,44px);font-weight:700;color:var(--n-dark);line-height:1.12;letter-spacing:-0.025em;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+        <h2 style="font-size:clamp(32px,3.8vw,44px);font-weight:700;color:#0A2540;line-height:1.12;letter-spacing:-0.025em;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
           <span>From</span>
-          <span style="position:relative;display:inline-block;color:var(--n-muted);">Messy<span style="position:absolute;left:0;right:0;top:52%;height:1.5px;background:var(--n-muted);opacity:0.55;border-radius:2px;transform:rotate(-1.5deg);"></span></span>
-          <span style="color:var(--n-dark);">To</span>
-          <span style="color:var(--brand);">Managed</span>
+          <span style="position:relative;display:inline-block;color:#425466;">Messy<span style="position:absolute;left:0;right:0;top:52%;height:1.5px;background:#425466;opacity:0.55;border-radius:2px;transform:rotate(-1.5deg);"></span></span>
+          <span style="color:#0A2540;">To</span>
+          <span style="color:#8B57C8;">Managed</span>
         </h2>
-        <p style="font-size:16px;color:var(--n-muted);line-height:1.65;max-width:500px;margin:0 auto;letter-spacing:-0.01em;">
+        <p style="font-size:16px;color:#425466;line-height:1.65;max-width:500px;margin:0 auto;letter-spacing:-0.01em;">
           See how Multistore for FlexStock replaces scattered store work with one clean workflow.
         </p>
       </div>
@@ -988,10 +992,10 @@
         <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 n-compare-before">
 
           <!-- Card header -->
-          <div style="padding:28px 28px 20px; border-bottom:1px solid var(--n-border-light);">
+          <div style="padding:28px 28px 20px; border-bottom:1px solid #EEF2F7;">
             <span class="n-compare-label-before">Before</span>
-            <h3 style="font-size:18px;font-weight:600;color:var(--n-dark);line-height:1.3;margin:14px 0 6px;letter-spacing:-0.015em;">Without Multi-Store Sync</h3>
-            <p style="font-size:13px;color:var(--n-muted);line-height:1.5;">Manual multi-store work often leads to:</p>
+            <h3 style="font-size:18px;font-weight:600;color:#0A2540;line-height:1.3;margin:14px 0 6px;letter-spacing:-0.015em;">Without Multi-Store Sync</h3>
+            <p style="font-size:13px;color:#425466;line-height:1.5;">Manual multi-store work often leads to:</p>
           </div>
 
           <!-- List -->
@@ -1023,7 +1027,7 @@
           </div>
 
           <!-- Before image -->
-          <div style="border-top:1px solid var(--n-border-light); margin-top:auto;">
+          <div style="border-top:1px solid #EEF2F7; margin-top:auto;">
             <img src="assets/before.jpg" alt="Before Multi-Store Sync" style="width:100%;display:block;object-fit:cover;">
           </div>
         </div><!-- /before card -->
@@ -1032,42 +1036,42 @@
         <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 reveal-d1 n-compare-after">
 
           <!-- Card header -->
-          <div style="padding:28px 28px 20px; border-bottom:1px solid var(--n-border-light); padding-top:31px;">
+          <div style="padding:28px 28px 20px; border-bottom:1px solid #EEF2F7; padding-top:31px;">
             <span class="n-compare-label-after">After</span>
-            <h3 style="font-size:18px;font-weight:600;color:var(--n-dark);line-height:1.3;margin:14px 0 6px;letter-spacing:-0.015em;">With Multistore for FlexStock</h3>
-            <p style="font-size:13px;color:var(--n-muted);line-height:1.5;">Everything stays in sync, automatically:</p>
+            <h3 style="font-size:18px;font-weight:600;color:#0A2540;line-height:1.3;margin:14px 0 6px;letter-spacing:-0.015em;">With Multistore for FlexStock</h3>
+            <p style="font-size:13px;color:#425466;line-height:1.5;">Everything stays in sync, automatically:</p>
           </div>
 
           <!-- List -->
           <div style="padding:20px 28px 24px;">
             <div class="n-compare-item-after">
-              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7334C1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#8B57C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <span class="n-compare-text-after">Manage all stores from one dashboard</span>
             </div>
             <div class="n-compare-item-after">
-              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7334C1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#8B57C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <span class="n-compare-text-after">Sync products, stock and prices instantly</span>
             </div>
             <div class="n-compare-item-after">
-              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7334C1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#8B57C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <span class="n-compare-text-after">No more repetitive manual edits</span>
             </div>
             <div class="n-compare-item-after">
-              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7334C1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#8B57C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <span class="n-compare-text-after">Keep inventory separate or shared — your choice</span>
             </div>
             <div class="n-compare-item-after">
-              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7334C1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#8B57C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <span class="n-compare-text-after">Save hours every week, automatically</span>
             </div>
             <div class="n-compare-item-after">
-              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#7334C1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="n-compare-icon-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#8B57C8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
               <span class="n-compare-text-after">Focus on growing your business, not managing chaos</span>
             </div>
           </div>
 
           <!-- After image -->
-          <div style="border-top:1px solid var(--n-border-light); margin-top:auto;">
+          <div style="border-top:1px solid #EEF2F7; margin-top:auto;">
             <img src="assets/after.jpg" alt="After Multi-Store Sync" style="width:100%;display:block;object-fit:cover;">
           </div>
         </div><!-- /after card -->
@@ -1079,7 +1083,7 @@
   <!-- ══════════════════════════════════════════════════════
        BENTO FEATURES GRID — Everything You Need
   ══════════════════════════════════════════════════════ -->
-  <section style="background:#f9fafb; padding:100px 32px 120px;">
+  <section style="background:#f6f9fc; padding:100px 32px 120px;">
     <div style="max-width:1180px; margin:0 auto;">
 
       <!-- Section header -->
@@ -1106,7 +1110,7 @@
           grid-column:1/3;
           grid-row:1/3;
           background:#fff;
-          border:1px solid var(--n-border);
+          border:1px solid #E3E8EF;
           border-radius:12px;
           overflow:hidden;
           display:flex;
@@ -1114,12 +1118,12 @@
           " class="card-hover">
           <div style="padding:28px 28px 20px;">
             <span class="n-badge" style="margin-bottom:14px;display:inline-block;">Sync Engine</span>
-            <h3 style="font-size:20px;font-weight:600;color:var(--n-dark);line-height:1.25;margin-bottom:8px;letter-spacing:-0.015em;">Real-Time + Scheduled Sync</h3>
-            <p style="font-size:14px;color:var(--n-muted);line-height:1.65;max-width:380px;">Push updates instantly or run sync on your schedule — full control over when and how your stores stay aligned.</p>
+            <h3 style="font-size:20px;font-weight:600;color:#0A2540;line-height:1.25;margin-bottom:8px;letter-spacing:-0.015em;">Real-Time + Scheduled Sync</h3>
+            <p style="font-size:14px;color:#425466;line-height:1.65;max-width:380px;">Push updates instantly or run sync on your schedule — full control over when and how your stores stay aligned.</p>
           </div>
-          <div style="margin:0 28px 28px;flex:1;border-radius:8px;background:var(--n-cream);background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+          <div style="margin:0 28px 28px;flex:1;border-radius:8px;background:#f6f9fc;background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span style="font-size:11px;color:var(--n-muted);opacity:0.6;font-weight:500;">Feature preview</span>
+            <span style="font-size:11px;color:#425466;opacity:0.6;font-weight:500;">Feature preview</span>
           </div>
         </div>
 
@@ -1128,7 +1132,7 @@
           grid-column:3/5;
           grid-row:1/2;
           background:#fff;
-          border:1px solid var(--n-border);
+          border:1px solid #E3E8EF;
           border-radius:12px;
           overflow:hidden;
           display:flex;
@@ -1136,12 +1140,12 @@
           " class="card-hover">
           <div style="padding:24px 24px 16px;">
             <span class="n-badge" style="margin-bottom:12px;display:inline-block;">Visibility</span>
-            <h3 style="font-size:17px;font-weight:600;color:var(--n-dark);line-height:1.25;margin-bottom:6px;letter-spacing:-0.012em;">Per-Store Tabs</h3>
-            <p style="font-size:13px;color:var(--n-muted);line-height:1.6;">Give every store its own clean tab for easier control and visibility.</p>
+            <h3 style="font-size:17px;font-weight:600;color:#0A2540;line-height:1.25;margin-bottom:6px;letter-spacing:-0.012em;">Per-Store Tabs</h3>
+            <p style="font-size:13px;color:#425466;line-height:1.6;">Give every store its own clean tab for easier control and visibility.</p>
           </div>
-          <div style="margin:0 24px 24px;flex:1;min-height:100px;border-radius:8px;background:var(--n-cream);background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+          <div style="margin:0 24px 24px;flex:1;min-height:100px;border-radius:8px;background:#f6f9fc;background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            <span style="font-size:10px;color:var(--n-muted);opacity:0.55;font-weight:500;">Feature preview</span>
+            <span style="font-size:10px;color:#425466;opacity:0.55;font-weight:500;">Feature preview</span>
           </div>
         </div>
 
@@ -1150,7 +1154,7 @@
           grid-column:5/7;
           grid-row:1/2;
           background:#fff;
-          border:1px solid var(--n-border);
+          border:1px solid #E3E8EF;
           border-radius:12px;
           overflow:hidden;
           display:flex;
@@ -1158,12 +1162,12 @@
           " class="card-hover">
           <div style="padding:24px 24px 16px;">
             <span class="n-badge" style="margin-bottom:12px;display:inline-block;">Logic</span>
-            <h3 style="font-size:17px;font-weight:600;color:var(--n-dark);line-height:1.25;margin-bottom:6px;letter-spacing:-0.012em;">Formula Support</h3>
-            <p style="font-size:13px;color:var(--n-muted);line-height:1.6;">Use formulas for pricing, calculations, and inventory logic directly in Sheets.</p>
+            <h3 style="font-size:17px;font-weight:600;color:#0A2540;line-height:1.25;margin-bottom:6px;letter-spacing:-0.012em;">Formula Support</h3>
+            <p style="font-size:13px;color:#425466;line-height:1.6;">Use formulas for pricing, calculations, and inventory logic directly in Sheets.</p>
           </div>
-          <div style="margin:0 24px 24px;flex:1;min-height:100px;border-radius:8px;background:var(--n-cream);background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+          <div style="margin:0 24px 24px;flex:1;min-height:100px;border-radius:8px;background:#f6f9fc;background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
-            <span style="font-size:10px;color:var(--n-muted);opacity:0.55;font-weight:500;">Feature preview</span>
+            <span style="font-size:10px;color:#425466;opacity:0.55;font-weight:500;">Feature preview</span>
           </div>
         </div>
 
@@ -1172,7 +1176,7 @@
           grid-column:3/5;
           grid-row:2/3;
           background:#fff;
-          border:1px solid var(--n-border);
+          border:1px solid #E3E8EF;
           border-radius:12px;
           overflow:hidden;
           display:flex;
@@ -1180,12 +1184,12 @@
           " class="card-hover">
           <div style="padding:24px 24px 16px;">
             <span class="n-badge" style="margin-bottom:12px;display:inline-block;">Control</span>
-            <h3 style="font-size:17px;font-weight:600;color:var(--n-dark);line-height:1.25;margin-bottom:6px;letter-spacing:-0.012em;">Flexible Store Behavior</h3>
-            <p style="font-size:13px;color:var(--n-muted);line-height:1.6;">Choose which stores sync together and which stay fully separate.</p>
+            <h3 style="font-size:17px;font-weight:600;color:#0A2540;line-height:1.25;margin-bottom:6px;letter-spacing:-0.012em;">Flexible Store Behavior</h3>
+            <p style="font-size:13px;color:#425466;line-height:1.6;">Choose which stores sync together and which stay fully separate.</p>
           </div>
-          <div style="margin:0 24px 24px;flex:1;min-height:100px;border-radius:8px;background:var(--n-cream);background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+          <div style="margin:0 24px 24px;flex:1;min-height:100px;border-radius:8px;background:#f6f9fc;background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-            <span style="font-size:10px;color:var(--n-muted);opacity:0.55;font-weight:500;">Feature preview</span>
+            <span style="font-size:10px;color:#425466;opacity:0.55;font-weight:500;">Feature preview</span>
           </div>
         </div>
 
@@ -1194,7 +1198,7 @@
           grid-column:5/7;
           grid-row:2/3;
           background:#fff;
-          border:1px solid var(--n-border);
+          border:1px solid #E3E8EF;
           border-radius:12px;
           overflow:hidden;
           display:flex;
@@ -1202,12 +1206,12 @@
           " class="card-hover">
           <div style="padding:24px 24px 16px;">
             <span class="n-badge" style="margin-bottom:12px;display:inline-block;">Publishing</span>
-            <h3 style="font-size:17px;font-weight:600;color:var(--n-dark);line-height:1.25;margin-bottom:6px;letter-spacing:-0.012em;">Add New Products</h3>
-            <p style="font-size:13px;color:var(--n-muted);line-height:1.6;">Create and push new products to connected stores faster from Sheets.</p>
+            <h3 style="font-size:17px;font-weight:600;color:#0A2540;line-height:1.25;margin-bottom:6px;letter-spacing:-0.012em;">Add New Products</h3>
+            <p style="font-size:13px;color:#425466;line-height:1.6;">Create and push new products to connected stores faster from Sheets.</p>
           </div>
-          <div style="margin:0 24px 24px;flex:1;min-height:100px;border-radius:8px;background:var(--n-cream);background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+          <div style="margin:0 24px 24px;flex:1;min-height:100px;border-radius:8px;background:#f6f9fc;background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-            <span style="font-size:10px;color:var(--n-muted);opacity:0.55;font-weight:500;">Feature preview</span>
+            <span style="font-size:10px;color:#425466;opacity:0.55;font-weight:500;">Feature preview</span>
           </div>
         </div>
 
@@ -1215,7 +1219,7 @@
         <div style="
           grid-column:1/4;
           background:#fff;
-          border:1px solid var(--n-border);
+          border:1px solid #E3E8EF;
           border-radius:12px;
           overflow:hidden;
           display:flex;
@@ -1223,33 +1227,33 @@
           " class="card-hover">
           <div style="padding:28px 28px 20px;">
             <span class="n-badge" style="margin-bottom:14px;display:inline-block;">Bulk Edit</span>
-            <h3 style="font-size:20px;font-weight:600;color:var(--n-dark);line-height:1.25;margin-bottom:8px;letter-spacing:-0.015em;">Bulk Editing from Sheets</h3>
-            <p style="font-size:14px;color:var(--n-muted);line-height:1.65;max-width:440px;">Edit stock, prices, SKUs, and product data in bulk without switching dashboards — all from a single Google Sheet.</p>
+            <h3 style="font-size:20px;font-weight:600;color:#0A2540;line-height:1.25;margin-bottom:8px;letter-spacing:-0.015em;">Bulk Editing from Sheets</h3>
+            <p style="font-size:14px;color:#425466;line-height:1.65;max-width:440px;">Edit stock, prices, SKUs, and product data in bulk without switching dashboards — all from a single Google Sheet.</p>
           </div>
-          <div style="margin:0 28px 28px;flex:1;min-height:160px;border-radius:8px;background:var(--n-cream);background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+          <div style="margin:0 28px 28px;flex:1;min-height:160px;border-radius:8px;background:#f6f9fc;background-image:radial-gradient(circle,rgba(0,0,0,0.055) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-            <span style="font-size:11px;color:var(--n-muted);opacity:0.6;font-weight:500;">Feature preview</span>
+            <span style="font-size:11px;color:#425466;opacity:0.6;font-weight:500;">Feature preview</span>
           </div>
         </div>
 
         <!-- Card 7 — Two-Way Sync (row 3, col 4) -->
         <div style="
           grid-column:4/7;
-          background:var(--brand-light);
-          border:1px solid var(--brand-border);
+          background:#F3ECFF;
+          border:1px solid rgba(139,87,200,0.2);
           border-radius:12px;
           overflow:hidden;
           display:flex;
           flex-direction:column;
           " class="card-hover">
           <div style="padding:28px 28px 20px;">
-            <span style="display:inline-block;background:rgba(115,52,193,0.1);border:1px solid rgba(115,52,193,0.2);border-radius:4px;padding:3px 8px;font-size:11px;font-weight:600;color:var(--brand);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;">Bidirectional</span>
-            <h3 style="font-size:20px;font-weight:600;color:var(--n-dark);line-height:1.25;margin-bottom:8px;letter-spacing:-0.015em;">Two-Way Sync</h3>
-            <p style="font-size:14px;color:var(--n-muted);line-height:1.65;">Keep WooCommerce stores and Google Sheets aligned in both directions — always in sync.</p>
+            <span style="display:inline-block;background:rgba(115,52,193,0.1);border:1px solid rgba(115,52,193,0.2);border-radius:4px;padding:3px 8px;font-size:11px;font-weight:600;color:#8B57C8;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;">Bidirectional</span>
+            <h3 style="font-size:20px;font-weight:600;color:#0A2540;line-height:1.25;margin-bottom:8px;letter-spacing:-0.015em;">Two-Way Sync</h3>
+            <p style="font-size:14px;color:#425466;line-height:1.65;">Keep WooCommerce stores and Google Sheets aligned in both directions — always in sync.</p>
           </div>
-          <div style="margin:0 28px 28px;flex:1;min-height:140px;border-radius:8px;background:rgba(115,52,193,0.06);background-image:radial-gradient(circle,rgba(115,52,193,0.12) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+          <div style="margin:0 28px 28px;flex:1;min-height:140px;border-radius:8px;background:rgba(139,87,200,0.06);background-image:radial-gradient(circle,rgba(139,87,200,0.12) 1px,transparent 1px);background-size:20px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(115,52,193,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
-            <span style="font-size:11px;color:var(--brand);opacity:0.5;font-weight:500;">Feature preview</span>
+            <span style="font-size:11px;color:#8B57C8;opacity:0.5;font-weight:500;">Feature preview</span>
           </div>
         </div>
 
@@ -1258,19 +1262,19 @@
   </section>
 
   <!-- Pricing Section -->
-  <section id="pricing" style="background:var(--n-cream); padding:120px 32px 100px;">
+  <section id="pricing" style="background:#ffffff; padding:120px 32px 100px;">
 
     <!-- Section header -->
     <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700" style="max-width:640px;margin:0 auto 56px;text-align:center;">
       <div style="margin-bottom:16px;"><span class="n-badge">Pricing</span></div>
-      <h2 style="font-size:clamp(32px,3.8vw,44px);font-weight:700;color:var(--n-dark);line-height:1.12;letter-spacing:-0.025em;margin-bottom:14px;">Simple, Honest Pricing</h2>
-      <p style="font-size:16px;color:var(--n-muted);line-height:1.65;letter-spacing:-0.01em;">One annual fee. Everything you need to run multiple WooCommerce stores from a single Google Sheet.</p>
+      <h2 style="font-size:clamp(32px,3.8vw,44px);font-weight:700;color:#0A2540;line-height:1.12;letter-spacing:-0.025em;margin-bottom:14px;">Simple, Honest Pricing</h2>
+      <p style="font-size:16px;color:#425466;line-height:1.65;letter-spacing:-0.01em;">One annual fee. Everything you need to run multiple WooCommerce stores from a single Google Sheet.</p>
     </div>
 
     <!-- FOMO bar -->
     <div style="display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:48px;">
       <!-- Countdown -->
-      <div style="display:flex;align-items:center;gap:8px;padding:7px 14px;background:#fff;border:1px solid var(--n-border);border-radius:6px;">
+      <div style="display:flex;align-items:center;gap:8px;padding:7px 14px;background:#fff;border:1px solid #E3E8EF;border-radius:6px;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <span style="font-size:12.5px;font-weight:500;color:#ef4444;">Offer ends in</span>
         <div style="display:flex;align-items:center;gap:3px;font-size:12.5px;font-weight:700;color:#ef4444;font-variant-numeric:tabular-nums;">
@@ -1278,22 +1282,22 @@
         </div>
       </div>
       <!-- Divider -->
-      <div style="width:1px;height:18px;background:var(--n-border);"></div>
+      <div style="width:1px;height:18px;background:#E3E8EF;"></div>
       <!-- Social proof -->
       <div style="display:flex;align-items:center;gap:8px;">
         <div style="display:flex;">
-          <div style="width:24px;height:24px;border-radius:50%;border:2px solid var(--n-cream);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;background:linear-gradient(135deg,#7334C1,#a855f7);position:relative;z-index:3;">J</div>
-          <div style="width:24px;height:24px;border-radius:50%;border:2px solid var(--n-cream);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;background:linear-gradient(135deg,#10b981,#34d399);position:relative;z-index:2;margin-left:-6px;">M</div>
-          <div style="width:24px;height:24px;border-radius:50%;border:2px solid var(--n-cream);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;background:linear-gradient(135deg,#3b82f6,#60a5fa);position:relative;z-index:1;margin-left:-6px;">R</div>
+          <div style="width:24px;height:24px;border-radius:50%;border:2px solid #f6f9fc;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;background:linear-gradient(135deg,#8B57C8,#B07EDB);position:relative;z-index:3;">J</div>
+          <div style="width:24px;height:24px;border-radius:50%;border:2px solid #f6f9fc;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;background:linear-gradient(135deg,#10b981,#34d399);position:relative;z-index:2;margin-left:-6px;">M</div>
+          <div style="width:24px;height:24px;border-radius:50%;border:2px solid #f6f9fc;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;background:linear-gradient(135deg,#3b82f6,#60a5fa);position:relative;z-index:1;margin-left:-6px;">R</div>
         </div>
-        <span style="font-size:13px;color:var(--n-muted);"><strong style="color:var(--n-text);font-weight:500;">127 store owners</strong> joined this week</span>
+        <span style="font-size:13px;color:#425466;"><strong style="color:#1a1f2e;font-weight:500;">127 store owners</strong> joined this week</span>
       </div>
       <!-- Divider -->
-      <div style="width:1px;height:18px;background:var(--n-border);"></div>
+      <div style="width:1px;height:18px;background:#E3E8EF;"></div>
       <!-- Guarantee -->
       <div style="display:flex;align-items:center;gap:6px;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span style="font-size:13px;color:var(--n-muted);">30-day money-back guarantee</span>
+        <span style="font-size:13px;color:#425466;">30-day money-back guarantee</span>
       </div>
     </div>
 
@@ -1302,51 +1306,51 @@
     <div style="display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:16px;align-items:stretch;">
 
       <!-- ── Starter ── -->
-      <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 card-hover-subtle" style="background:#fff;border:1px solid var(--n-border);border-radius:12px;padding:32px 28px;cursor:default;">
-        <span style="font-size:11px;font-weight:600;color:var(--n-muted);letter-spacing:0.07em;text-transform:uppercase;">Starter</span>
-        <h3 style="font-size:19px;font-weight:600;color:var(--n-dark);margin:10px 0 5px;letter-spacing:-0.01em;">Single Store</h3>
-        <p style="font-size:13px;color:var(--n-muted);line-height:1.6;margin-bottom:24px;">Perfect for managing one WooCommerce store from Google Sheets.</p>
+      <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 card-hover-subtle" style="background:#fff;border:1px solid #E3E8EF;border-radius:12px;padding:32px 28px;cursor:default;">
+        <span style="font-size:11px;font-weight:600;color:#425466;letter-spacing:0.07em;text-transform:uppercase;">Starter</span>
+        <h3 style="font-size:19px;font-weight:600;color:#0A2540;margin:10px 0 5px;letter-spacing:-0.01em;">Single Store</h3>
+        <p style="font-size:13px;color:#425466;line-height:1.6;margin-bottom:24px;">Perfect for managing one WooCommerce store from Google Sheets.</p>
         <div style="margin-bottom:24px;">
           <div style="display:flex;align-items:baseline;gap:4px;">
-            <span style="font-size:40px;font-weight:700;color:var(--n-dark);line-height:1;letter-spacing:-0.03em;">$49</span>
-            <span style="font-size:13px;color:var(--n-muted);">/year</span>
+            <span style="font-size:40px;font-weight:700;color:#0A2540;line-height:1;letter-spacing:-0.03em;">$49</span>
+            <span style="font-size:13px;color:#425466;">/year</span>
           </div>
           <div style="display:flex;align-items:center;gap:7px;margin-top:5px;">
-            <span style="font-size:12.5px;color:var(--n-border);text-decoration:line-through;">$99/year</span>
+            <span style="font-size:12.5px;color:#c8d6e5;text-decoration:line-through;">$99/year</span>
             <span style="font-size:10.5px;font-weight:600;color:#16a34a;background:#f0fdf4;border:1px solid rgba(22,163,74,0.18);border-radius:4px;padding:1px 7px;">50% OFF</span>
           </div>
         </div>
         <a href="#" class="pricing-link-outline">Get Started</a>
-        <div style="border-top:1px solid var(--n-border-light);padding-top:20px;">
-          <p style="font-size:10.5px;font-weight:600;color:var(--n-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;">What's included</p>
+        <div style="border-top:1px solid #EEF2F7;padding-top:20px;">
+          <p style="font-size:10.5px;font-weight:600;color:#425466;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;">What's included</p>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 store connection</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Real-Time + Scheduled Sync</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Per-Store Tabs in Google Sheets</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Two-Way Sync</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-border);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Bulk Editing from Sheets</span></li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-border);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Formula Support</span></li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Email support</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>1 store connection</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Real-Time + Scheduled Sync</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Per-Store Tabs in Google Sheets</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Two-Way Sync</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#c8d6e5;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Bulk Editing from Sheets</span></li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#c8d6e5;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Formula Support</span></li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Email support</li>
           </ul>
         </div>
       </div>
 
       <!-- ── Growth (Featured) ── -->
-      <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 reveal-d1 card-hover-featured" style="background:#fff;border:1.5px solid var(--brand);border-radius:12px;padding:32px 28px;box-shadow:0 4px 32px rgba(115,52,193,0.10);position:relative;cursor:default;">
+      <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 reveal-d1 card-hover-featured" style="background:#fff;border:1.5px solid #8B57C8;border-radius:12px;padding:32px 28px;box-shadow:0 4px 32px rgba(139,87,200,0.10);position:relative;cursor:default;">
         <!-- Most Popular badge -->
-        <div style="position:absolute;top:-1px;right:20px;background:var(--brand);color:#fff;font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:4px 12px;border-radius:0 0 6px 6px;">
+        <div style="position:absolute;top:-1px;right:20px;background:#8B57C8;color:#fff;font-size:10px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:4px 12px;border-radius:0 0 6px 6px;">
           Most Popular
         </div>
-        <span style="font-size:11px;font-weight:600;color:var(--brand);letter-spacing:0.07em;text-transform:uppercase;">Growth</span>
-        <h3 style="font-size:19px;font-weight:600;color:var(--n-dark);margin:10px 0 5px;letter-spacing:-0.01em;">Multi-Store Hub</h3>
-        <p style="font-size:13px;color:var(--n-muted);line-height:1.6;margin-bottom:24px;">For growing businesses managing multiple WooCommerce stores.</p>
+        <span style="font-size:11px;font-weight:600;color:#8B57C8;letter-spacing:0.07em;text-transform:uppercase;">Growth</span>
+        <h3 style="font-size:19px;font-weight:600;color:#0A2540;margin:10px 0 5px;letter-spacing:-0.01em;">Multi-Store Hub</h3>
+        <p style="font-size:13px;color:#425466;line-height:1.6;margin-bottom:24px;">For growing businesses managing multiple WooCommerce stores.</p>
         <div style="margin-bottom:14px;">
           <div style="display:flex;align-items:baseline;gap:4px;">
-            <span style="font-size:40px;font-weight:700;color:var(--brand);line-height:1;letter-spacing:-0.03em;">$99</span>
-            <span style="font-size:13px;color:var(--n-muted);">/year</span>
+            <span style="font-size:40px;font-weight:700;color:#8B57C8;line-height:1;letter-spacing:-0.03em;">$99</span>
+            <span style="font-size:13px;color:#425466;">/year</span>
           </div>
           <div style="display:flex;align-items:center;gap:7px;margin-top:5px;">
-            <span style="font-size:12.5px;color:var(--n-border);text-decoration:line-through;">$199/year</span>
+            <span style="font-size:12.5px;color:#c8d6e5;text-decoration:line-through;">$199/year</span>
             <span style="font-size:10.5px;font-weight:600;color:#16a34a;background:#f0fdf4;border:1px solid rgba(22,163,74,0.18);border-radius:4px;padding:1px 7px;">50% OFF</span>
           </div>
         </div>
@@ -1355,37 +1359,37 @@
           <span style="font-size:12px;font-weight:500;color:#92400e;">Only <strong>11 spots</strong> left at this price</span>
         </div>
         <a href="#" class="pricing-link-brand">Get Growth Plan</a>
-        <div style="border-top:1px solid var(--n-border-light);padding-top:20px;">
-          <p style="font-size:10.5px;font-weight:600;color:var(--n-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;">Everything in Starter, plus</p>
+        <div style="border-top:1px solid #EEF2F7;padding-top:20px;">
+          <p style="font-size:10.5px;font-weight:600;color:#425466;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;">Everything in Starter, plus</p>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 store connections</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bulk Editing from Sheets</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Formula Support for dynamic pricing</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Add New Products from Sheets</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Flexible Store Behavior modes</li>
-            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--n-text);"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7334C1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Priority email support</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 store connections</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bulk Editing from Sheets</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Formula Support for dynamic pricing</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Add New Products from Sheets</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Flexible Store Behavior modes</li>
+            <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#1a1f2e;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B57C8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Priority email support</li>
           </ul>
         </div>
       </div>
 
       <!-- ── Agency ── -->
-      <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 reveal-d2 card-hover-dark" style="background:#111110;border:1px solid #2a2a28;border-radius:12px;padding:32px 28px;cursor:default;">
-        <span style="font-size:11px;font-weight:600;color:#a78bfa;letter-spacing:0.07em;text-transform:uppercase;">Agency</span>
-        <h3 style="font-size:19px;font-weight:600;color:#f0efed;margin:10px 0 5px;letter-spacing:-0.01em;">Unlimited Scale</h3>
-        <p style="font-size:13px;color:#787774;line-height:1.6;margin-bottom:24px;">For agencies and power users managing unlimited client stores.</p>
+      <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700 reveal-d2 card-hover-dark" style="background:#0A2540;border:1px solid #1a3350;border-radius:12px;padding:32px 28px;cursor:default;">
+        <span style="font-size:11px;font-weight:600;color:#D4AAEE;letter-spacing:0.07em;text-transform:uppercase;">Agency</span>
+        <h3 style="font-size:19px;font-weight:600;color:#c8d6e5;margin:10px 0 5px;letter-spacing:-0.01em;">Unlimited Scale</h3>
+        <p style="font-size:13px;color:#6b8aaa;line-height:1.6;margin-bottom:24px;">For agencies and power users managing unlimited client stores.</p>
         <div style="margin-bottom:24px;">
           <div style="display:flex;align-items:baseline;gap:4px;">
-            <span style="font-size:40px;font-weight:700;color:#f0efed;line-height:1;letter-spacing:-0.03em;">$199</span>
-            <span style="font-size:13px;color:#52524f;">/year</span>
+            <span style="font-size:40px;font-weight:700;color:#c8d6e5;line-height:1;letter-spacing:-0.03em;">$199</span>
+            <span style="font-size:13px;color:#6b8aaa;">/year</span>
           </div>
           <div style="display:flex;align-items:center;gap:7px;margin-top:5px;">
-            <span style="font-size:12.5px;color:#3a3a38;text-decoration:line-through;">$399/year</span>
+            <span style="font-size:12.5px;color:#1a3350;text-decoration:line-through;">$399/year</span>
             <span style="font-size:10.5px;font-weight:600;color:#4ade80;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.18);border-radius:4px;padding:1px 7px;">50% OFF</span>
           </div>
         </div>
         <a href="#" class="pricing-link-dark">Get Agency Plan</a>
-        <div style="border-top:1px solid #1f1f1d;padding-top:20px;">
-          <p style="font-size:10.5px;font-weight:600;color:#52524f;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;">Everything in Growth, plus</p>
+        <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;">
+          <p style="font-size:10.5px;font-weight:600;color:#6b8aaa;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px;">Everything in Growth, plus</p>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
             <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#c8c7c4;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited store connections</li>
             <li style="display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#c8c7c4;"><svg style="flex-shrink:0;margin-top:2px;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>White-label ready</li>
@@ -1402,29 +1406,29 @@
 
     <!-- Stats trust row -->
     <div data-reveal class="opacity-0 translate-y-4 transition-all duration-700" style="max-width:1080px;margin:80px auto 0;">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--n-border);border-radius:10px;overflow:hidden;background:#fff;">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;background:#fff;">
 
-        <div style="padding:32px 24px;text-align:center;border-right:1px solid var(--n-border);">
-          <div style="font-size:30px;font-weight:700;color:var(--n-dark);letter-spacing:-0.025em;line-height:1;">35,000+</div>
-          <div style="font-size:12.5px;color:var(--n-muted);margin-top:6px;line-height:1.5;">Creators worldwide</div>
+        <div style="padding:32px 24px;text-align:center;border-right:1px solid #E3E8EF;">
+          <div style="font-size:30px;font-weight:700;color:#0A2540;letter-spacing:-0.025em;line-height:1;">35,000+</div>
+          <div style="font-size:12.5px;color:#425466;margin-top:6px;line-height:1.5;">Creators worldwide</div>
         </div>
 
-        <div style="padding:32px 24px;text-align:center;border-right:1px solid var(--n-border);">
-          <div style="font-size:30px;font-weight:700;color:var(--n-dark);letter-spacing:-0.025em;line-height:1;">30-Day</div>
-          <div style="font-size:12.5px;color:var(--n-muted);margin-top:6px;line-height:1.5;">Money-back guarantee</div>
+        <div style="padding:32px 24px;text-align:center;border-right:1px solid #E3E8EF;">
+          <div style="font-size:30px;font-weight:700;color:#0A2540;letter-spacing:-0.025em;line-height:1;">30-Day</div>
+          <div style="font-size:12.5px;color:#425466;margin-top:6px;line-height:1.5;">Money-back guarantee</div>
         </div>
 
-        <div style="padding:32px 24px;text-align:center;border-right:1px solid var(--n-border);">
+        <div style="padding:32px 24px;text-align:center;border-right:1px solid #E3E8EF;">
           <div style="display:flex;align-items:center;justify-content:center;gap:4px;margin-bottom:6px;">
-            <span style="font-size:30px;font-weight:700;color:var(--n-dark);letter-spacing:-0.025em;line-height:1;">5.0</span>
+            <span style="font-size:30px;font-weight:700;color:#0A2540;letter-spacing:-0.025em;line-height:1;">5.0</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b" style="margin-top:2px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <div style="font-size:12.5px;color:var(--n-muted);line-height:1.5;">Average rating</div>
+          <div style="font-size:12.5px;color:#425466;line-height:1.5;">Average rating</div>
         </div>
 
         <div style="padding:32px 24px;text-align:center;">
-          <div style="font-size:30px;font-weight:700;color:var(--n-dark);letter-spacing:-0.025em;line-height:1;">100%</div>
-          <div style="font-size:12.5px;color:var(--n-muted);margin-top:6px;line-height:1.5;">GDPR-friendly &amp; secure</div>
+          <div style="font-size:30px;font-weight:700;color:#0A2540;letter-spacing:-0.025em;line-height:1;">100%</div>
+          <div style="font-size:12.5px;color:#425466;margin-top:6px;line-height:1.5;">GDPR-friendly &amp; secure</div>
         </div>
 
       </div>
@@ -1433,7 +1437,7 @@
   </section>
 
   <!-- Social Proof Section -->
-  <section id="social-proof" style="padding:120px 0 80px;background:var(--n-cream);">
+  <section id="social-proof" style="padding:120px 0 80px;background:#f6f9fc;">
     <div style="max-width:1160px;margin:0 auto;padding:0 24px;">
 
       <!-- Header -->
@@ -1454,10 +1458,10 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <span style="font-size:22px;font-weight:700;color:var(--n-dark);">5.0</span>
-        <span style="font-size:14px;color:var(--n-muted);">from 200+ reviews</span>
-        <span style="width:1px;height:20px;background:var(--n-border);display:inline-block;"></span>
-        <span style="font-size:14px;color:var(--n-muted);">Rated on <strong style="color:var(--n-text);font-weight:500;">WordPress.org</strong></span>
+        <span style="font-size:22px;font-weight:700;color:#0A2540;">5.0</span>
+        <span style="font-size:14px;color:#425466;">from 200+ reviews</span>
+        <span style="width:1px;height:20px;background:#E3E8EF;display:inline-block;"></span>
+        <span style="font-size:14px;color:#425466;">Rated on <strong style="color:#1a1f2e;font-weight:500;">WordPress.org</strong></span>
       </div>
 
       <!-- Testimonial cards grid -->
@@ -1472,12 +1476,12 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p style="font-size:15px;color:var(--n-text);line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
+          <p style="font-size:15px;color:#1a1f2e;line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
           <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#7334C1,#a855f7);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;">A</div>
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#8B57C8,#B07EDB);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;">A</div>
             <div>
-              <p style="font-size:14px;font-weight:600;color:var(--n-dark);margin:0;">Author Name</p>
-              <p style="font-size:12px;color:var(--n-muted);margin:0;">Store Owner</p>
+              <p style="font-size:14px;font-weight:600;color:#0A2540;margin:0;">Author Name</p>
+              <p style="font-size:12px;color:#425466;margin:0;">Store Owner</p>
             </div>
           </div>
         </div>
@@ -1491,12 +1495,12 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p style="font-size:15px;color:var(--n-text);line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
+          <p style="font-size:15px;color:#1a1f2e;line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
           <div style="display:flex;align-items:center;gap:12px;">
             <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#10b981,#34d399);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;">B</div>
             <div>
-              <p style="font-size:14px;font-weight:600;color:var(--n-dark);margin:0;">Author Name</p>
-              <p style="font-size:12px;color:var(--n-muted);margin:0;">WooCommerce Developer</p>
+              <p style="font-size:14px;font-weight:600;color:#0A2540;margin:0;">Author Name</p>
+              <p style="font-size:12px;color:#425466;margin:0;">WooCommerce Developer</p>
             </div>
           </div>
         </div>
@@ -1510,12 +1514,12 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p style="font-size:15px;color:var(--n-text);line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
+          <p style="font-size:15px;color:#1a1f2e;line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
           <div style="display:flex;align-items:center;gap:12px;">
             <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;">C</div>
             <div>
-              <p style="font-size:14px;font-weight:600;color:var(--n-dark);margin:0;">Author Name</p>
-              <p style="font-size:12px;color:var(--n-muted);margin:0;">Agency Owner</p>
+              <p style="font-size:14px;font-weight:600;color:#0A2540;margin:0;">Author Name</p>
+              <p style="font-size:12px;color:#425466;margin:0;">Agency Owner</p>
             </div>
           </div>
         </div>
@@ -1529,12 +1533,12 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p style="font-size:15px;color:var(--n-text);line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
+          <p style="font-size:15px;color:#1a1f2e;line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
           <div style="display:flex;align-items:center;gap:12px;">
             <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#fbbf24);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;">D</div>
             <div>
-              <p style="font-size:14px;font-weight:600;color:var(--n-dark);margin:0;">Author Name</p>
-              <p style="font-size:12px;color:var(--n-muted);margin:0;">E-commerce Manager</p>
+              <p style="font-size:14px;font-weight:600;color:#0A2540;margin:0;">Author Name</p>
+              <p style="font-size:12px;color:#425466;margin:0;">E-commerce Manager</p>
             </div>
           </div>
         </div>
@@ -1548,12 +1552,12 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p style="font-size:15px;color:var(--n-text);line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
+          <p style="font-size:15px;color:#1a1f2e;line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
           <div style="display:flex;align-items:center;gap:12px;">
             <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#e11d48,#fb7185);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;">E</div>
             <div>
-              <p style="font-size:14px;font-weight:600;color:var(--n-dark);margin:0;">Author Name</p>
-              <p style="font-size:12px;color:var(--n-muted);margin:0;">WordPress Developer</p>
+              <p style="font-size:14px;font-weight:600;color:#0A2540;margin:0;">Author Name</p>
+              <p style="font-size:12px;color:#425466;margin:0;">WordPress Developer</p>
             </div>
           </div>
         </div>
@@ -1567,12 +1571,12 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p style="font-size:15px;color:var(--n-text);line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
+          <p style="font-size:15px;color:#1a1f2e;line-height:1.75;margin-bottom:24px;">"Testimonial content will be added later. This is a placeholder for a real user review."</p>
           <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#7334C1,#a855f7);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;">F</div>
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#8B57C8,#B07EDB);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;flex-shrink:0;">F</div>
             <div>
-              <p style="font-size:14px;font-weight:600;color:var(--n-dark);margin:0;">Author Name</p>
-              <p style="font-size:12px;color:var(--n-muted);margin:0;">Multi-Brand Retailer</p>
+              <p style="font-size:14px;font-weight:600;color:#0A2540;margin:0;">Author Name</p>
+              <p style="font-size:12px;color:#425466;margin:0;">Multi-Brand Retailer</p>
             </div>
           </div>
         </div>
@@ -1593,14 +1597,14 @@
       <!-- FAQ Item 1 -->
       <div class="n-faq-item rounded-lg border">
         <button class="faq-toggle w-full flex justify-between items-center px-6 py-4 lg:px-8 lg:py-5 text-left" data-target="faq-1" aria-expanded="false" aria-controls="faq-1" id="faq-toggle-1">
-          <span style="font-size:16px;font-weight:500;color:var(--n-dark);padding-right:32px;">Can I sync the same SKU across multiple stores?</span>
+          <span style="font-size:16px;font-weight:500;color:#0A2540;padding-right:32px;">Can I sync the same SKU across multiple stores?</span>
           <div class="flex-shrink-0">
-            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#7334C1;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#8B57C8;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
           </div>
         </button>
         <div id="faq-1" class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0;" aria-labelledby="faq-toggle-1">
           <div class="px-6 lg:px-8 pb-6 lg:pb-8">
-            <p style="font-size:15px;color:var(--n-muted);line-height:1.7;">Yes. Shared Stock mode is built for stores that should stay aligned.</p>
+            <p style="font-size:15px;color:#425466;line-height:1.7;">Yes. Shared Stock mode is built for stores that should stay aligned.</p>
           </div>
         </div>
       </div>
@@ -1608,14 +1612,14 @@
       <!-- FAQ Item 2 -->
       <div class="n-faq-item rounded-lg border">
         <button class="faq-toggle w-full flex justify-between items-center px-6 py-4 lg:px-8 lg:py-5 text-left" data-target="faq-2" aria-expanded="false" aria-controls="faq-2" id="faq-toggle-2">
-          <span style="font-size:16px;font-weight:500;color:var(--n-dark);padding-right:32px;">Can I manage multiple stores without syncing inventory?</span>
+          <span style="font-size:16px;font-weight:500;color:#0A2540;padding-right:32px;">Can I manage multiple stores without syncing inventory?</span>
           <div class="flex-shrink-0">
-            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#7334C1;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#8B57C8;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
           </div>
         </button>
         <div id="faq-2" class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0;" aria-labelledby="faq-toggle-2">
           <div class="px-6 lg:px-8 pb-6 lg:pb-8">
-            <p style="font-size:15px;color:var(--n-muted);line-height:1.7;">Yes. Independent Inventory mode keeps store inventory separate while letting you manage them in one workflow.</p>
+            <p style="font-size:15px;color:#425466;line-height:1.7;">Yes. Independent Inventory mode keeps store inventory separate while letting you manage them in one workflow.</p>
           </div>
         </div>
       </div>
@@ -1623,14 +1627,14 @@
       <!-- FAQ Item 3 -->
       <div class="n-faq-item rounded-lg border">
         <button class="faq-toggle w-full flex justify-between items-center px-6 py-4 lg:px-8 lg:py-5 text-left" data-target="faq-3" aria-expanded="false" aria-controls="faq-3" id="faq-toggle-3">
-          <span style="font-size:16px;font-weight:500;color:var(--n-dark);padding-right:32px;">Can I use this for different brands?</span>
+          <span style="font-size:16px;font-weight:500;color:#0A2540;padding-right:32px;">Can I use this for different brands?</span>
           <div class="flex-shrink-0">
-            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#7334C1;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#8B57C8;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
           </div>
         </button>
         <div id="faq-3" class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0;" aria-labelledby="faq-toggle-3">
           <div class="px-6 lg:px-8 pb-6 lg:pb-8">
-            <p style="font-size:15px;color:var(--n-muted);line-height:1.7;">Yes. This is one of the strongest use cases for the addon.</p>
+            <p style="font-size:15px;color:#425466;line-height:1.7;">Yes. This is one of the strongest use cases for the addon.</p>
           </div>
         </div>
       </div>
@@ -1638,14 +1642,14 @@
       <!-- FAQ Item 4 -->
       <div class="n-faq-item rounded-lg border">
         <button class="faq-toggle w-full flex justify-between items-center px-6 py-4 lg:px-8 lg:py-5 text-left" data-target="faq-4" aria-expanded="false" aria-controls="faq-4" id="faq-toggle-4">
-          <span style="font-size:16px;font-weight:500;color:var(--n-dark);padding-right:32px;">Do I need Google Sheets?</span>
+          <span style="font-size:16px;font-weight:500;color:#0A2540;padding-right:32px;">Do I need Google Sheets?</span>
           <div class="flex-shrink-0">
-            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#7334C1;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#8B57C8;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
           </div>
         </button>
         <div id="faq-4" class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0;" aria-labelledby="faq-toggle-4">
           <div class="px-6 lg:px-8 pb-6 lg:pb-8">
-            <p style="font-size:15px;color:var(--n-muted);line-height:1.7;">Not always. Some workflows can be handled without relying on Sheets as the main interface.</p>
+            <p style="font-size:15px;color:#425466;line-height:1.7;">Not always. Some workflows can be handled without relying on Sheets as the main interface.</p>
           </div>
         </div>
       </div>
@@ -1653,14 +1657,14 @@
       <!-- FAQ Item 5 -->
       <div class="n-faq-item rounded-lg border">
         <button class="faq-toggle w-full flex justify-between items-center px-6 py-4 lg:px-8 lg:py-5 text-left" data-target="faq-5" aria-expanded="false" aria-controls="faq-5" id="faq-toggle-5">
-          <span style="font-size:16px;font-weight:500;color:var(--n-dark);padding-right:32px;">Can I move products between stores?</span>
+          <span style="font-size:16px;font-weight:500;color:#0A2540;padding-right:32px;">Can I move products between stores?</span>
           <div class="flex-shrink-0">
-            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#7334C1;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#8B57C8;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
           </div>
         </button>
         <div id="faq-5" class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0;" aria-labelledby="faq-toggle-5">
           <div class="px-6 lg:px-8 pb-6 lg:pb-8">
-            <p style="font-size:15px;color:var(--n-muted);line-height:1.7;">Yes. Import/export and store-to-store product movement are supported for flexible operations.</p>
+            <p style="font-size:15px;color:#425466;line-height:1.7;">Yes. Import/export and store-to-store product movement are supported for flexible operations.</p>
           </div>
         </div>
       </div>
@@ -1668,14 +1672,14 @@
       <!-- FAQ Item 6 -->
       <div class="n-faq-item rounded-lg border">
         <button class="faq-toggle w-full flex justify-between items-center px-6 py-4 lg:px-8 lg:py-5 text-left" data-target="faq-6" aria-expanded="false" aria-controls="faq-6" id="faq-toggle-6">
-          <span style="font-size:16px;font-weight:500;color:var(--n-dark);padding-right:32px;">How is this different from a normal multistore plugin?</span>
+          <span style="font-size:16px;font-weight:500;color:#0A2540;padding-right:32px;">How is this different from a normal multistore plugin?</span>
           <div class="flex-shrink-0">
-            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#7334C1;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+            <svg class="faq-icon w-6 h-6 transition-transform duration-200" style="color:#8B57C8;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
           </div>
         </button>
         <div id="faq-6" class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height:0;" aria-labelledby="faq-toggle-6">
           <div class="px-6 lg:px-8 pb-6 lg:pb-8">
-            <p style="font-size:15px;color:var(--n-muted);line-height:1.7;">This addon is built around store behavior and spreadsheet control, not just basic store connection.</p>
+            <p style="font-size:15px;color:#425466;line-height:1.7;">This addon is built around store behavior and spreadsheet control, not just basic store connection.</p>
           </div>
         </div>
       </div>
@@ -1810,12 +1814,12 @@
 
           <!-- Post 1 -->
           <a href="#" class="blog-post-link">
-            <div style="width:72px;height:52px;border-radius:8px;background:linear-gradient(135deg,#1e0a3c,#7334C1);flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+            <div style="width:72px;height:52px;border-radius:8px;background:linear-gradient(135deg,#0A2540,#8B57C8);flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
             </div>
             <div>
-              <p style="font-size:11px;color:#52525b;margin-bottom:4px;">Mar 10, 2025</p>
-              <p class="blog-title" style="font-size:13px;font-weight:600;color:#e4e4e7;line-height:1.4;transition:color 0.15s;">How to Manage Multiple WooCommerce Stores from One Google Sheet</p>
+              <p style="font-size:11px;color:#6b8aaa;margin-bottom:4px;">Mar 10, 2025</p>
+              <p class="blog-title" style="font-size:13px;font-weight:600;color:#c8d6e5;line-height:1.4;transition:color 0.15s;">How to Manage Multiple WooCommerce Stores from One Google Sheet</p>
             </div>
           </a>
 
@@ -1825,19 +1829,19 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg>
             </div>
             <div>
-              <p style="font-size:11px;color:#52525b;margin-bottom:4px;">Feb 28, 2025</p>
-              <p class="blog-title" style="font-size:13px;font-weight:600;color:#e4e4e7;line-height:1.4;transition:color 0.15s;">Shared vs Independent Inventory: Which Multi-Store Mode Is Right for You?</p>
+              <p style="font-size:11px;color:#6b8aaa;margin-bottom:4px;">Feb 28, 2025</p>
+              <p class="blog-title" style="font-size:13px;font-weight:600;color:#c8d6e5;line-height:1.4;transition:color 0.15s;">Shared vs Independent Inventory: Which Multi-Store Mode Is Right for You?</p>
             </div>
           </a>
 
           <!-- Post 3 -->
           <a href="#" class="blog-post-link">
-            <div style="width:72px;height:52px;border-radius:8px;background:linear-gradient(135deg,#1a0533,#4c1d95);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
+            <div style="width:72px;height:52px;border-radius:8px;background:linear-gradient(135deg,#0A2540,#7340B5);flex-shrink:0;display:flex;align-items:center;justify-content:center;">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z"/></svg>
             </div>
             <div>
-              <p style="font-size:11px;color:#52525b;margin-bottom:4px;">Feb 14, 2025</p>
-              <p class="blog-title" style="font-size:13px;font-weight:600;color:#e4e4e7;line-height:1.4;transition:color 0.15s;">5 Ways Agencies Are Using FlexStock Multi-Store Sync to Scale Client Operations</p>
+              <p style="font-size:11px;color:#6b8aaa;margin-bottom:4px;">Feb 14, 2025</p>
+              <p class="blog-title" style="font-size:13px;font-weight:600;color:#c8d6e5;line-height:1.4;transition:color 0.15s;">5 Ways Agencies Are Using FlexStock Multi-Store Sync to Scale Client Operations</p>
             </div>
           </a>
 
@@ -1847,7 +1851,7 @@
     </div><!-- /top footer grid -->
 
     <!-- Divider -->
-    <div style="border-top:1px solid #18181b;"></div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06);"></div>
 
     <!-- Bottom footer -->
     <div style="max-width:1200px;margin:0 auto;padding:28px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
@@ -1856,12 +1860,12 @@
       <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
         <!-- WPPOOL wordmark -->
         <a href="#" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
-          <div style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#7334C1,#9333ea);display:flex;align-items:center;justify-content:center;">
+          <div style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#9B6DD8,#8B57C8);display:flex;align-items:center;justify-content:center;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
           </div>
-          <span style="font-size:15px;font-weight:800;color:#e4e4e7;letter-spacing:-0.01em;">WPPOOL</span>
+          <span style="font-size:15px;font-weight:800;color:#c8d6e5;letter-spacing:-0.01em;">WPPOOL</span>
         </a>
-        <p style="font-size:13px;color:#52525b;margin:0;max-width:320px;line-height:1.5;">Supercharging WordPress &amp; WooCommerce stores with powerful, spreadsheet-driven tools.</p>
+        <p style="font-size:13px;color:#6b8aaa;margin:0;max-width:320px;line-height:1.5;">Supercharging WordPress &amp; WooCommerce stores with powerful, spreadsheet-driven tools.</p>
       </div>
 
       <!-- Social + copyright -->
@@ -1887,7 +1891,7 @@
         </div>
 
         <!-- Copyright -->
-        <p style="font-size:12px;color:#3f3f46;margin:0;">&copy; 2025 WPPOOL. All rights reserved.</p>
+        <p style="font-size:12px;color:#2d4a6b;margin:0;">&copy; 2025 WPPOOL. All rights reserved.</p>
       </div>
 
     </div><!-- /bottom footer -->
@@ -1895,5 +1899,23 @@
 
   <!-- JS -->
   <script src="js/main.js"></script>
+
+  <!-- Navbar scroll state -->
+  <script>
+    (function() {
+      var nav = document.getElementById('main-nav');
+      var hero = document.querySelector('.n-hero');
+      function updateNav() {
+        var heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
+        if (heroBottom <= 60) {
+          nav.classList.add('nav-scrolled');
+        } else {
+          nav.classList.remove('nav-scrolled');
+        }
+      }
+      window.addEventListener('scroll', updateNav, { passive: true });
+      updateNav();
+    })();
+  </script>
 </body>
 </html>
